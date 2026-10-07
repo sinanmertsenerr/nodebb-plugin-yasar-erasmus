@@ -183,7 +183,7 @@
 			return {
 				s,
 				slots: [
-					{ label: 'Bölüm', value: f ? f.tr : '', href: '#okullar', done: Boolean(f) },
+					{ label: 'Bölüm', tag: state.level, value: f ? f.tr : '', href: '#okullar', done: Boolean(f) },
 					{ label: 'Ülke', value: state.country || '', href: f ? `#okullar/${f.id}` : '', done: Boolean(state.country) },
 					{ label: 'Okul', value: s ? s.name : '', href: state.country ? `#okullar/${state.field}/${slug(state.country)}` : '', done: Boolean(s) },
 				],
@@ -225,8 +225,9 @@
 				const here = i === current;
 				const state_ = x.done ? 'is-done' : here ? 'is-current' : 'is-todo';
 				const link = x.done && x.href && !(i === 2);
-				const inner = `<span class="yer-slot__label">${x.label}${link ? '<span class="yer-slot__edit">Değiştir</span>' : ''}</span><strong class="yer-slot__value${fresh ? ' is-new' : ''}">${x.done ? esc(x.value) : (here ? 'Seçiyorsun' : 'Seçilmedi')}</strong>`;
-				return `<li class="yer-slot ${state_}">${link ? `<a href="${esc(x.href)}" aria-label="${x.label}: ${esc(x.value)}. Değiştir">${inner}</a>` : `<span${here ? ' aria-current="step"' : ''}>${inner}</span>`}</li>`;
+				const label = x.tag ? `<span>${x.label}<span class="yer-slot__tag"> · ${esc(x.tag)}</span></span>` : x.label;
+				const inner = `<span class="yer-slot__label">${label}${link ? '<span class="yer-slot__edit">Değiştir</span>' : ''}</span><strong class="yer-slot__value${fresh ? ' is-new' : ''}">${x.done ? esc(x.value) : (here ? 'Seçiyorsun' : 'Seçilmedi')}</strong>`;
+				return `<li class="yer-slot ${state_}">${link ? `<a href="${esc(x.href)}" aria-label="${x.label}: ${esc(x.value)}${x.tag ? `, ${esc(x.tag)}` : ''}. Değiştir">${inner}</a>` : `<span${here ? ' aria-current="step"' : ''}>${inner}</span>`}</li>`;
 			}).join('');
 			prevSlots = m.slots.map(x => x.value);
 			t.querySelector('[data-stub]').innerHTML = `<div><span class="yer-slot__label">Aylık hibe</span><strong class="yer-num${m.monthly ? '' : ' is-empty'}">${m.monthly ? eur(m.monthly) : '–'}</strong></div>
@@ -748,6 +749,7 @@
 				}
 				root.querySelectorAll('[data-level]').forEach(b => b.setAttribute('aria-pressed', String(b === lv)));
 				root.querySelector('[data-field-cards]').innerHTML = fieldCards();
+				fillTicket(false);
 				return;
 			}
 			if (t.closest('[data-clear-q]')) {

@@ -1647,6 +1647,11 @@
 	gap: 8px;
 }
 
+.yer-slot__tag {
+	font-weight: 600;
+	color: var(--yer-accent-text);
+}
+
 .yer-slot__edit {
 	color: var(--yer-accent-text);
 	font-weight: 600;
