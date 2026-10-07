@@ -251,8 +251,8 @@
 
 		function stepFields() {
 			return `<section class="yer-step" aria-labelledby="yer-step-t">
+				<h2 class="yer-sr" id="yer-step-t" tabindex="-1" data-focus>Bölümünü seç</h2>
 				<div class="yer-step__head yer-step__head--level">
-					<h2 class="yer-h2" id="yer-step-t" tabindex="-1" data-focus>Bölümünü seç</h2>
 					<div class="yer-seg" role="group" aria-label="Öğrenim seviyesi">${LEVELS.map(l =>
 						`<button type="button" class="yer-seg__opt" data-level="${esc(l)}" aria-pressed="${l === state.level}">${esc(l)}</button>`).join('')}</div>
 				</div>

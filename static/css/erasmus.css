@@ -579,22 +579,9 @@
 	margin-bottom: 14px;
 }
 
-/* Öğrenim seviyesi seçici */
-/* Başlık solda, seçici sayfanın ortasında. */
+/* Öğrenim seviyesi seçici. Bölüm adımında görünen başlık yok, seçici ortada durur. */
 .yer-step__head--level {
-	display: grid;
-	grid-template-columns: 1fr auto 1fr;
-}
-
-@media (max-width: 760px) {
-	.yer-step__head--level {
-		grid-template-columns: 1fr;
-		justify-items: center;
-	}
-
-	.yer-step__head--level > .yer-h2 {
-		justify-self: start;
-	}
+	justify-content: center;
 }
 
 .yer-seg {
