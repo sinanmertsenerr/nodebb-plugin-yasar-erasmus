@@ -15,6 +15,8 @@
 	const { esc, nf, eur, km, lvl } = T;
 
 	const LEVEL_ORDER = ['Önlisans', 'Lisans', 'Yüksek Lisans', 'Doktora'];
+	const LEVELS = ['Lisans', 'Yüksek Lisans', 'Doktora'];
+	const LEVEL_KEY = 'yer-level';
 	const TABS = [['okullar', 'Okul bul'], ['yol-haritasi', 'Yol haritası'], ['hibe', 'Hibe'], ['sss', 'Sık sorulanlar']];
 	const BIG_LIST = 12;
 	const FALLBACK_LABEL = {
@@ -73,6 +75,13 @@
 			return { id: f.id, tr: f.tr, schools: list.length, countries: new Set(list.map(s => s.country_tr)).size };
 		}).filter(f => f.schools);
 		const fieldById = new Map(fields.map(f => [f.id, f]));
+		const savedLevel = (() => {
+			try {
+				return window.localStorage.getItem(LEVEL_KEY);
+			} catch (err) {
+				return null;
+			}
+		})();
 
 		const state = {
 			view: 'okullar',
@@ -83,13 +92,19 @@
 			green: false,
 			q: '',
 			faqQ: '',
+			level: LEVELS.includes(savedLevel) ? savedLevel : 'Lisans',
 		};
 		let motion = 0;
 		let lastDepth = 0;
 
 		// ------------------------------------------------------------ veri
 
-		const inField = s => s.programs.some(p => p.field_id === state.field);
+		// Seviyesi yazılmamış anlaşmalar her seviyede görünür; yanlışlıkla gizlenmesin.
+		const atLevel = p => !p.levels.length || p.levels.includes(state.level);
+		const inField = s => s.programs.some(p => p.field_id === state.field && atLevel(p));
+		const levelFields = () => fields.map(f => Object.assign({}, f, {
+			schools: schools.filter(s => s.programs.some(p => p.field_id === f.id && atLevel(p))).length,
+		})).filter(f => f.schools).sort((a, b) => b.schools - a.schools);
 		const fieldSchools = () => schools.filter(inField);
 		const countrySchools = () => fieldSchools().filter(s => s.country_tr === state.country);
 		const depth = () => (state.schoolId ? 3 : state.country ? 2 : state.field ? 1 : 0);
@@ -236,10 +251,22 @@
 
 		function stepFields() {
 			return `<section class="yer-step" aria-labelledby="yer-step-t">
-				<h2 class="yer-h2" id="yer-step-t" tabindex="-1" data-focus>Bölümünü seç</h2>
-				<div class="yer-cards yer-cards--3">${fields.map((f, i) => `<a class="yer-card" href="#okullar/${esc(f.id)}" style="--i:${i}">
-					<strong class="yer-card__name">${esc(f.tr)}</strong><span class="yer-count" aria-label="${nf.format(f.schools)} anlaşmalı okul">${nf.format(f.schools)}</span>${icon('chevron-right')}</a>`).join('')}</div>
+				<div class="yer-step__head">
+					<h2 class="yer-h2" id="yer-step-t" tabindex="-1" data-focus>Bölümünü seç</h2>
+					<div class="yer-seg" role="group" aria-label="Öğrenim seviyesi">${LEVELS.map(l =>
+						`<button type="button" class="yer-seg__opt" data-level="${esc(l)}" aria-pressed="${l === state.level}">${esc(l)}</button>`).join('')}</div>
+				</div>
+				<div data-field-cards>${fieldCards()}</div>
 			</section>`;
+		}
+
+		function fieldCards() {
+			const list = levelFields();
+			if (!list.length) {
+				return `<div class="yer-state yer-state--empty"><h3 class="yer-state__title">${esc(state.level)} için anlaşma yok</h3></div>`;
+			}
+			return `<div class="yer-cards yer-cards--3">${list.map((f, i) => `<a class="yer-card" href="#okullar/${esc(f.id)}" style="--i:${i}">
+				<strong class="yer-card__name">${esc(f.tr)}</strong><span class="yer-count" aria-label="${nf.format(f.schools)} anlaşmalı okul">${nf.format(f.schools)}</span>${icon('chevron-right')}</a>`).join('')}</div>`;
 		}
 
 		function stepCountries() {
@@ -249,6 +276,7 @@
 			return `<section class="yer-step" aria-labelledby="yer-step-t">
 				${backLink()}
 				<h2 class="yer-h2" id="yer-step-t" tabindex="-1" data-focus>Hangi ülke?</h2>
+				${list.length ? '' : `<p class="yer-note">Bu bölümde ${esc(state.level)} için anlaşma yok. <a class="yer-link" href="#okullar">Seviyeyi değiştir</a></p>`}
 				<div class="yer-cards yer-cards--4">${list.map(([c, items], i) => `<a class="yer-card" href="#okullar/${esc(state.field)}/${esc(slug(c))}" style="--i:${i}">
 					<span><strong class="yer-card__name">${esc(c)}</strong><span class="yer-card__meta">${nf.format(items.length)} okul · ${eur(items[0].grant.monthly_eur)}/ay</span></span>${icon('chevron-right')}</a>`).join('')}</div>
 			</section>`;
@@ -708,6 +736,18 @@
 			if (step) {
 				state.months = Math.max(3, Math.min(6, state.months + Number(step.dataset.months)));
 				updateCalc(byId.get(state.schoolId));
+				return;
+			}
+			const lv = t.closest('[data-level]');
+			if (lv) {
+				state.level = lv.dataset.level;
+				try {
+					window.localStorage.setItem(LEVEL_KEY, state.level);
+				} catch (err) {
+					// Gizli sekme: seçim sadece bu sayfada kalır.
+				}
+				root.querySelectorAll('[data-level]').forEach(b => b.setAttribute('aria-pressed', String(b === lv)));
+				root.querySelector('[data-field-cards]').innerHTML = fieldCards();
 				return;
 			}
 			if (t.closest('[data-clear-q]')) {

@@ -8,7 +8,7 @@ Yaşar Forum'un `/erasmus` sayfası: bölüm → ülke → okul akışı, hibe h
 
 ## Kurulum
 
-    npm install https://codeload.github.com/sinanmertsenerr/nodebb-plugin-yasar-erasmus/tar.gz/v1.0.5
+    npm install https://codeload.github.com/sinanmertsenerr/nodebb-plugin-yasar-erasmus/tar.gz/v1.1.0
 
 ACP'de eklentiyi aç, rebuild ve restart. ACP → Ayarlar → Navigasyon'dan "Erasmus+" (`/erasmus`) ekle.
 
