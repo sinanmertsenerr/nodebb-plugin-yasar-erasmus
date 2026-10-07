@@ -235,6 +235,11 @@
 	margin-top: 0;
 }
 
+.yer-block--rule {
+	padding-top: 24px;
+	border-top: 1px solid var(--yer-line);
+}
+
 .yer-block > .yer-h2 {
 	margin-bottom: 12px;
 }
