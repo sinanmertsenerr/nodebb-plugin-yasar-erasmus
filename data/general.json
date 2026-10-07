@@ -1,0 +1,822 @@
+{
+ "generated_at": "2026-10-07",
+ "term": {
+  "academic_year": "2025-2026"
+ },
+ "grants": {
+  "monthly_grant": [
+   {
+    "group": "1. ve 2. Grup Ülkeler",
+    "countries": [
+     "Almanya",
+     "Avusturya",
+     "Belçika",
+     "Çek Cumhuriyeti",
+     "Danimarka",
+     "Estonya",
+     "Finlandiya",
+     "Fransa",
+     "Güney Kıbrıs Rum Yönetimi",
+     "Hollanda",
+     "İrlanda",
+     "İspanya",
+     "İsveç",
+     "İtalya",
+     "İzlanda",
+     "Letonya",
+     "Lihtenştayn",
+     "Lüksemburg",
+     "Malta",
+     "Norveç",
+     "Portekiz",
+     "Slovakya",
+     "Slovenya",
+     "Yunanistan"
+    ],
+    "eur": 600
+   },
+   {
+    "group": "3. Grup Ülkeler",
+    "countries": [
+     "Bulgaristan",
+     "Hırvatistan",
+     "Kuzey Makedonya",
+     "Litvanya",
+     "Macaristan",
+     "Polonya",
+     "Romanya",
+     "Sırbistan",
+     "Türkiye"
+    ],
+    "eur": 450
+   }
+  ],
+  "travel_grant": [
+   {
+    "band": "10 ila 99 KM arasında",
+    "min_km": 10,
+    "max_km": 99,
+    "standard_eur": 28,
+    "green_eur": 56
+   },
+   {
+    "band": "100 ila 499 KM arasında",
+    "min_km": 100,
+    "max_km": 499,
+    "standard_eur": 211,
+    "green_eur": 285
+   },
+   {
+    "band": "500 ila 1999 KM arasında",
+    "min_km": 500,
+    "max_km": 1999,
+    "standard_eur": 309,
+    "green_eur": 417
+   },
+   {
+    "band": "2000 ila 2999 KM arasında",
+    "min_km": 2000,
+    "max_km": 2999,
+    "standard_eur": 395,
+    "green_eur": 535
+   },
+   {
+    "band": "3000 ila 3999 KM arasında",
+    "min_km": 3000,
+    "max_km": 3999,
+    "standard_eur": 580,
+    "green_eur": 785
+   },
+   {
+    "band": "4000 ila 7999 KM arasında",
+    "min_km": 4000,
+    "max_km": 7999,
+    "standard_eur": 1188,
+    "green_eur": 1188
+   },
+   {
+    "band": "8000 KM veya daha fazla",
+    "min_km": 8000,
+    "max_km": null,
+    "standard_eur": 1735,
+    "green_eur": 1735
+   }
+  ],
+  "fewer_opportunities_monthly_eur": 250,
+  "note": "Aylık hibe, yol hibesi ve ilave hibe Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu'ndan (20.11.2025, 2025-2026) doğrulandı.",
+  "verified_source": "https://erasmus.yasar.edu.tr/student-mobility/outgoing-students/",
+  "verified": "2026-10-07",
+  "fewer_opportunities": {
+   "monthly_eur": 250,
+   "short_5_14_daily_extra_eur": 100,
+   "short_15_30_daily_extra_eur": 150
+  },
+  "payment": {
+   "advance_percent": 70,
+   "failure_cut_percent": [
+    5,
+    30
+   ],
+   "max_months_per_cycle": 12
+  },
+  "green_travel_note": "Yeşil seyahat: gidiş ve dönüşte yolun yarısından fazlası tren, otobüs ya da paylaşımlı araçla."
+ },
+ "fields": [
+  {
+   "id": "isletme",
+   "tr": "İşletme",
+   "en": "Business Administration",
+   "schools": 68
+  },
+  {
+   "id": "muzik",
+   "tr": "Müzik",
+   "en": "Music",
+   "schools": 63
+  },
+  {
+   "id": "bilgisayar",
+   "tr": "Bilgisayar Mühendisliği ve Bilişim",
+   "en": "Computer Engineering and ICT",
+   "schools": 24
+  },
+  {
+   "id": "uluslararasi-iliskiler",
+   "tr": "Uluslararası İlişkiler",
+   "en": "International Relations",
+   "schools": 21
+  },
+  {
+   "id": "ekonomi",
+   "tr": "Ekonomi",
+   "en": "Economics",
+   "schools": 19
+  },
+  {
+   "id": "iletisim",
+   "tr": "İletişim",
+   "en": "Communication",
+   "schools": 19
+  },
+  {
+   "id": "turizm",
+   "tr": "Turizm",
+   "en": "Tourism",
+   "schools": 19
+  },
+  {
+   "id": "gorsel-iletisim",
+   "tr": "Görsel İletişim Tasarımı",
+   "en": "Visual Communication Design",
+   "schools": 19
+  },
+  {
+   "id": "mimarlik",
+   "tr": "Mimarlık",
+   "en": "Architecture",
+   "schools": 14
+  },
+  {
+   "id": "ic-mimarlik",
+   "tr": "İç Mimarlık",
+   "en": "Interior Architecture",
+   "schools": 12
+  },
+  {
+   "id": "guzel-sanatlar",
+   "tr": "Güzel Sanatlar",
+   "en": "Fine Arts",
+   "schools": 11
+  },
+  {
+   "id": "hukuk",
+   "tr": "Hukuk",
+   "en": "Law",
+   "schools": 10
+  },
+  {
+   "id": "sinema-medya",
+   "tr": "Radyo, Televizyon ve Sinema",
+   "en": "Radio, TV and Cinema",
+   "schools": 9
+  },
+  {
+   "id": "lojistik",
+   "tr": "Lojistik",
+   "en": "Logistics",
+   "schools": 9
+  },
+  {
+   "id": "muhendislik",
+   "tr": "Mühendislik",
+   "en": "Engineering",
+   "schools": 9
+  },
+  {
+   "id": "endustri-muh",
+   "tr": "Endüstri Mühendisliği",
+   "en": "Industrial Engineering",
+   "schools": 8
+  },
+  {
+   "id": "elektrik",
+   "tr": "Elektrik-Elektronik Mühendisliği",
+   "en": "Electrical and Electronics Engineering",
+   "schools": 7
+  },
+  {
+   "id": "dil-edebiyat",
+   "tr": "Dil ve Edebiyat",
+   "en": "Languages and Literature",
+   "schools": 6
+  },
+  {
+   "id": "enerji",
+   "tr": "Enerji Sistemleri Mühendisliği",
+   "en": "Energy Systems Engineering",
+   "schools": 6
+  },
+  {
+   "id": "psikoloji",
+   "tr": "Psikoloji",
+   "en": "Psychology",
+   "schools": 6
+  },
+  {
+   "id": "yeni-medya",
+   "tr": "Yeni Medya",
+   "en": "New Media",
+   "schools": 5
+  },
+  {
+   "id": "endustriyel-tasarim",
+   "tr": "Endüstriyel Tasarım",
+   "en": "Industrial Design",
+   "schools": 5
+  },
+  {
+   "id": "halkla-iliskiler",
+   "tr": "Halkla İlişkiler ve Reklamcılık",
+   "en": "PR and Advertising",
+   "schools": 3
+  },
+  {
+   "id": "insaat",
+   "tr": "İnşaat Mühendisliği",
+   "en": "Civil Engineering",
+   "schools": 3
+  },
+  {
+   "id": "yazilim",
+   "tr": "Yazılım Mühendisliği",
+   "en": "Software Engineering",
+   "schools": 3
+  },
+  {
+   "id": "makine",
+   "tr": "Makine Mühendisliği",
+   "en": "Mechanical Engineering",
+   "schools": 3
+  },
+  {
+   "id": "gazetecilik",
+   "tr": "Gazetecilik",
+   "en": "Journalism",
+   "schools": 2
+  },
+  {
+   "id": "animasyon",
+   "tr": "Animasyon",
+   "en": "Animation",
+   "schools": 2
+  },
+  {
+   "id": "tarih",
+   "tr": "Tarih",
+   "en": "History",
+   "schools": 1
+  },
+  {
+   "id": "arkeoloji",
+   "tr": "Arkeoloji",
+   "en": "Archaeology",
+   "schools": 1
+  },
+  {
+   "id": "tarim",
+   "tr": "Tarım",
+   "en": "Agriculture",
+   "schools": 1
+  },
+  {
+   "id": "egitim",
+   "tr": "Eğitim",
+   "en": "Education",
+   "schools": 1
+  },
+  {
+   "id": "cocuk-gelisimi",
+   "tr": "Çocuk Gelişimi",
+   "en": "Child Studies",
+   "schools": 1
+  },
+  {
+   "id": "ceviri",
+   "tr": "Mütercim-Tercümanlık",
+   "en": "Translation and Interpreting",
+   "schools": 1
+  },
+  {
+   "id": "gida",
+   "tr": "Gıda Mühendisliği",
+   "en": "Food Engineering",
+   "schools": 1
+  }
+ ],
+ "rules": {
+  "source": "https://erasmus.yasar.edu.tr/student-mobility/outgoing-students/",
+  "verified": "2026-10-07",
+  "cards": {
+   "payment": [
+    {
+     "icon": "euro",
+     "title": "Hibe",
+     "text": "Masraflarına katkıdır, hepsini karşılamaz. Tutar ülkeye göre değişir."
+    },
+    {
+     "icon": "calendar",
+     "title": "Tek dönem",
+     "text": "Hibe tek dönem için. Tam yıl gidersen ikinci dönem hibesiz."
+    },
+    {
+     "icon": "school",
+     "title": "Harç",
+     "text": "Sadece Yaşar'a ödersin. Karşı okula harç yok, küçük ücretler çıkabilir."
+    },
+    {
+     "icon": "shield",
+     "title": "Bursun",
+     "text": "Kesilmez, azalmaz."
+    },
+    {
+     "icon": "wallet",
+     "title": "Senin masrafın",
+     "text": "Vize, oturum izni, sağlık sigortası, konaklama ve günlük yaşam."
+    }
+   ],
+   "courses": [
+    {
+     "icon": "book",
+     "title": "Ders yükü",
+     "text": "30 AKTS ideal, en az 20 AKTS."
+    },
+    {
+     "icon": "file",
+     "title": "Learning Agreement",
+     "text": "Derslerini gitmeden önce onaylatırsın."
+    },
+    {
+     "icon": "repeat",
+     "title": "Denklik",
+     "text": "Dönüşte transkript gelir. Aktarıma Fakülte Kurulu karar verir."
+    },
+    {
+     "icon": "clock",
+     "title": "Süre",
+     "text": "Genelde 1 dönem ya da 1 yıl (2–12 ay)."
+    }
+   ],
+   "apply": [
+    {
+     "icon": "chart",
+     "title": "Ortalama",
+     "text": "Lisans en az 2.20. Yüksek lisans ve doktora en az 2.50."
+    },
+    {
+     "icon": "language",
+     "title": "İngilizce",
+     "text": "Erasmus sınavından en az 60/100 (İngiliz Dili ve Edebiyatı, Mütercim-Tercümanlık: 70). TOEFL, YDS, e-YDS, YÖKDİL de geçer."
+    },
+    {
+     "icon": "check",
+     "title": "Diğer şartlar",
+     "text": "En az 1 dönemi bitirmiş ol. Bölümünün okulla anlaşması olsun."
+    }
+   ]
+  },
+  "disclaimer": "Resmî Yaşar sayfası değildir. Bilgiler Uluslararası Ofis'ten derlenir. Karar vermeden koordinatörüne danış."
+ },
+ "faq": [
+  {
+   "group": "Başvuru ve seçim",
+   "q": "Kimler başvurabilir?",
+   "a": "Örgün ve tam zamanlı öğrenciler. En az 1 dönemi bitirmiş olmalısın. Ortalama: lisans 2.20, yüksek lisans ve doktora 2.50. Bölümünün okulla anlaşması olmalı. Kaydın donukken başvurabilirsin ama o dönem gidemezsin. Çift anadalda tek anadaldan başvurursun. Yandaldan başvuru yok.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/student-mobility/outgoing-students"
+   ]
+  },
+  {
+   "group": "Başvuru ve seçim",
+   "q": "Nereden ve ne zaman başvururum?",
+   "a": "TurnaPortal'dan (turnaportal.ua.gov.tr). Geçen yıl tarih 19 Ocak – 9 Şubat 2026 idi. Yeni tarih ofisin duyurularında çıkar. Belge teslim etmezsin. Ortalaman sistemden otomatik gelir.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/application"
+   ]
+  },
+  {
+   "group": "Başvuru ve seçim",
+   "q": "Dil şartı nedir?",
+   "a": "Yaşar'ın Erasmus İngilizce sınavından en az 60/100 (yazılı, B2). İngiliz Dili ve Edebiyatı ile Mütercim-Tercümanlık için 70. Sınav yerine şunlar da geçer: TOEFL iBT 72 (bu iki bölümde 84), YDS, e-YDS ya da YÖKDİL 60. Son 3 yılın Erasmus sınav puanı ve en az B2 YDYO notu da sayılır.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/application"
+   ]
+  },
+  {
+   "group": "Başvuru ve seçim",
+   "q": "Nasıl seçiliyorum?",
+   "a": "Puanın yarısı ortalamadan, yarısı dil puanından gelir. Ek puan: şehit ve gazi çocukları +15, engelli öğrenciler +10. Daha önce Erasmus'a gittiysen −10. Asil ve yedek liste ofisin sitesinde ilan edilir.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)"
+   ]
+  },
+  {
+   "group": "Başvuru ve seçim",
+   "q": "Okul bazında kontenjan kaç?",
+   "a": "Yayımlanmıyor. Her anlaşmanın kontenjanı farklı. Toplam kontenjan üniversiteye gelen hibeye göre belirlenir. Bir okulu merak ediyorsan bölüm koordinatörüne ya da erasmus@yasar.edu.tr'ye sor.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)"
+   ]
+  },
+  {
+   "group": "Başvuru ve seçim",
+   "q": "Listede olmayan bir okula gidebilir miyim?",
+   "a": "Hayır. Bölümünün o okulla imzalı anlaşması olmalı. Geçen yıl son tarih 9 Şubat 2026 idi, sonra imzalananlar o yıla sayılmadı. Yeni okul önermek için bölüm koordinatörüne ve AB Araştırma Merkezi'ne yaz.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/faq"
+   ]
+  },
+  {
+   "group": "Hibe ve ödeme",
+   "q": "Hibe ne kadar?",
+   "a": "Ayda 600 € (1. ve 2. grup ülkeler) ya da 450 € (3. grup: Bulgaristan, Hırvatistan, Kuzey Makedonya, Litvanya, Macaristan, Polonya, Romanya, Sırbistan). Üstüne mesafeye göre tek seferlik yol hibesi eklenir. Kaldığın gün sayısına göre hesaplanır.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)"
+   ]
+  },
+  {
+   "group": "Hibe ve ödeme",
+   "q": "Hibe ne zaman yatar?",
+   "a": "%70'i gitmeden önce yatar. Kalanı dönüşte, evrakları teslim edince yatar. Derslerden kalırsan %5–30 kesilir. Geçerli sebep olmadan erken dönersen hibeyi geri ödersin.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)"
+   ]
+  },
+  {
+   "group": "Hibe ve ödeme",
+   "q": "Hibesiz gidebilir miyim?",
+   "a": "Evet. Aynı değerlendirmeden geçersin, sadece ödeme almazsın. Yedek listedeysen sonuçtan sonra en geç 1 hafta içinde ofise e-posta at.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)"
+   ]
+  },
+  {
+   "group": "Hibe ve ödeme",
+   "q": "Ek destek var mı?",
+   "a": "Evet. İmkânı kısıtlıysan belgeyle ayda +250 €. Yeşil seyahat (tren, otobüs, paylaşımlı araç) yol hibesini artırır. Bunun için gidiş ve dönüşte yolun yarısından fazlası yeşil olmalı. Engelli ya da sağlık sorunu olanlara ek destek var.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/application"
+   ]
+  },
+  {
+   "group": "Hibe ve ödeme",
+   "q": "Harç ödüyor muyum?",
+   "a": "Sadece Yaşar'a ödersin. Bursun devam eder. Gittiğin okula harç ödemezsin. Sigorta, öğrenci birliği gibi küçük ücretler çıkabilir.",
+   "sources": [
+    "erasmus.yasar.edu.tr/faq",
+    "erasmus.yasar.edu.tr/student-mobility/outgoing-students"
+   ]
+  },
+  {
+   "group": "Hibe ve ödeme",
+   "q": "Tam yıl gidersem hibe nasıl olur?",
+   "a": "Hibe tek dönem için verilir. Tam yıl gidersen ikinci dönem hibesiz olur.",
+   "sources": [
+    "erasmus.yasar.edu.tr/student-mobility/outgoing-students"
+   ]
+  },
+  {
+   "group": "Dersler ve denklik",
+   "q": "Kaç AKTS almalıyım?",
+   "a": "Dönemde 30 AKTS ideal, en az 20 AKTS. AKTS'yi Yaşar'ın yerel kredisiyle karıştırma.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/faq",
+    "erasmus.yasar.edu.tr/student-mobility/outgoing-students"
+   ]
+  },
+  {
+   "group": "Dersler ve denklik",
+   "q": "Learning Agreement nedir?",
+   "a": "Alacağın dersleri yazdığın çevrimiçi anlaşma (OLA). Sen, Yaşar ve karşı okul imzalarsınız. Gitmeden önce biter. Sonradan değişiklik için herkesin onayı gerekir.",
+   "sources": [
+    "erasmus.yasar.edu.tr/faq"
+   ]
+  },
+  {
+   "group": "Dersler ve denklik",
+   "q": "Aldığım dersler denk sayılır mı?",
+   "a": "Learning Agreement'taki dersler sayılır. Dönüşte karşı okul transkript verir. Kredi ve not aktarımına Fakülte Kurulu karar verir. Dersler transkriptinde Erasmus+ notuyla görünür.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/student-mobility/outgoing-students"
+   ]
+  },
+  {
+   "group": "Hazırlık",
+   "q": "Dil hazırlığı nasıl olur?",
+   "a": "Derslerin dilinde yeterli olmalısın. Gitmeden önce EU Academy'de (OLS) seviye sınavına girersin. İstersen orada ücretsiz kurs alabilirsin. Okulun kendi dil kursu da olabilir.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/faq"
+   ]
+  },
+  {
+   "group": "Hazırlık",
+   "q": "Vize, sigorta ve konaklama kimin işi?",
+   "a": "Senin. Vize, oturum izni, sağlık sigortası ve konaklama senin işin ve masrafın. Konaklama için karşı okula erken yaz.",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)",
+    "erasmus.yasar.edu.tr/student-mobility/outgoing-students"
+   ]
+  },
+  {
+   "group": "Hazırlık",
+   "q": "Kime sorabilirim?",
+   "a": "Genel sorular: erasmus@yasar.edu.tr. Bölümüne özel sorular: bölümünün Erasmus koordinatörü (liste ofisin sitesinde).",
+   "sources": [
+    "Yaşar Erasmus Öğrenim Hareketliliği Bilgilendirme Sunumu (20.11.2025)"
+   ]
+  }
+ ],
+ "guidance": [
+  {
+   "id": "quota",
+   "title": "Okul bazında kontenjan",
+   "text": "Okul bazında kontenjan yayımlanmıyor. Başvuruda TurnaPortal'da görünebilir. Bölüm koordinatörüne ya da ofise sor.",
+   "links": [
+    {
+     "label": "TurnaPortal (giriş gerekir)",
+     "url": "https://turnaportal.ua.gov.tr"
+    },
+    {
+     "label": "Bölüm koordinatörleri",
+     "url": "https://erasmus.yasar.edu.tr/coordinators/"
+    },
+    {
+     "label": "erasmus@yasar.edu.tr",
+     "url": "mailto:erasmus@yasar.edu.tr"
+    }
+   ]
+  },
+  {
+   "id": "language",
+   "title": "Eğitim dili ve dil şartı",
+   "text": "Bildiğimiz şart aşağıda. Hangi ders hangi dilde, ders kataloğundan ve koordinatörden teyit et.",
+   "links": []
+  },
+  {
+   "id": "fees",
+   "title": "Ücret",
+   "text": "Karşı okula harç yok. Sigorta, öğrenci kartı gibi küçük ücretler çıkabilir.",
+   "links": []
+  },
+  {
+   "id": "deadlines",
+   "title": "Okulun nomination ve başvuru tarihleri",
+   "text": "Seçilince okula ayrıca başvurursun. Tarihler her yıl değişir, okulun sayfasından teyit et.",
+   "links": [
+    {
+     "label": "TurnaPortal",
+     "url": "https://turnaportal.ua.gov.tr"
+    },
+    {
+     "label": "Yaşar Apply Erasmus",
+     "url": "https://erasmus.yasar.edu.tr/application/"
+    }
+   ]
+  },
+  {
+   "id": "level",
+   "title": "Düzey belirtilmemiş anlaşmalar",
+   "text": "Düzey (lisans, yüksek lisans) listede yazmıyor. Bölüm koordinatörüne sor.",
+   "links": []
+  },
+  {
+   "id": "accommodation",
+   "title": "Konaklama",
+   "text": "Konaklama okula göre değişir. Bilgi yoksa okulun Erasmus sayfasına bak.",
+   "links": []
+  },
+  {
+   "id": "courses",
+   "title": "Ders seçimi",
+   "text": "Ders listesi okulun kataloğunda. Derslerini koordinatörünle Learning Agreement'ta onaylatırsın.",
+   "links": [
+    {
+     "label": "Bölüm koordinatörleri",
+     "url": "https://erasmus.yasar.edu.tr/coordinators/"
+    }
+   ]
+  },
+  {
+   "id": "no_data",
+   "title": "Bu okul için bilgi yok",
+   "text": "Bu bilgi bizde yok. Okulun Erasmus sayfasına bak, yoksa bölüm koordinatörüne sor.",
+   "links": [
+    {
+     "label": "Bölüm koordinatörleri",
+     "url": "https://erasmus.yasar.edu.tr/coordinators/"
+    }
+   ]
+  }
+ ],
+ "calendar": {
+  "academic_year": "2026-2027",
+  "applications": "19 Ocak - 9 Şubat 2026 (TurnaPortal)",
+  "language_exam_apply": "15 Kasım - 8 Aralık 2025",
+  "language_exam": "18 Aralık 2025",
+  "partnerships_cutoff": "9 Şubat 2026",
+  "note": "Bu yıl tarihler benzer olur. Yeni ilan çıkınca güncellenir.",
+  "next_call": "Yeni ilan genelde Ocak'ta çıkar. Ofisin duyurularını takip et."
+ },
+ "links": {
+  "site": "https://erasmus.yasar.edu.tr/",
+  "partners": "https://erasmus.yasar.edu.tr/partners/",
+  "faq": "https://erasmus.yasar.edu.tr/faq/",
+  "apply": "https://erasmus.yasar.edu.tr/application/",
+  "coordinators": "https://erasmus.yasar.edu.tr/coordinators/",
+  "documents": "https://erasmus.yasar.edu.tr/documents/"
+ },
+ "sources": {
+  "partners": "https://erasmus.yasar.edu.tr/partners/",
+  "partners_fetched": "2026-10-07",
+  "eche_api": "https://eche-list.erasmuswithoutpaper.eu/api/",
+  "geocoder": "https://nominatim.openstreetmap.org/search"
+ },
+ "stats": {
+  "schools": 232,
+  "programs": 407,
+  "countries": 27,
+  "eche_matched": 99,
+  "with_website": 227,
+  "geocoded": 231,
+  "info": {
+   "language_requirement": 184,
+   "instruction": 191,
+   "fees": 145,
+   "courses_url": 106,
+   "accommodation": 175,
+   "deadlines": 95
+  }
+ },
+ "warnings": [
+  "ECHE eşleşmesi yok: University of Music and Performing Arts Vienna (Austria) en iyi skor 0.59",
+  "ECHE eşleşmesi yok: University of Music and Performing Arts Graz (Austria) en iyi skor 0.60",
+  "ECHE eşleşmesi yok: Universitat Salzburg (Austria) en iyi skor 0.80",
+  "ECHE eşleşmesi yok: Haute Ecole De La Province de Liege Leon – Eli Troclet (Belgium) en iyi skor 0.80",
+  "ECHE eşleşmesi yok: Erasmushogeschool Brussel,Koninklijk Conservatorium (Belgium) en iyi skor 0.66",
+  "ECHE eşleşmesi yok: UC Leuven Limburg (Belgium) en iyi skor 0.74",
+  "ECHE eşleşmesi yok: Thomas More (Belgium) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: Artevelde University College Ghent (Belgium) en iyi skor 0.59",
+  "ECHE eşleşmesi yok: HOWEST, University of Applied Sciences (Belgium) en iyi skor 0.55",
+  "ECHE eşleşmesi yok: Burgas Free University (Bulgaria) en iyi skor 0.84",
+  "ECHE eşleşmesi yok: St.Cyril and St. Methodius University of Veliko Turnovo (Bulgaria) en iyi skor 0.54",
+  "ECHE eşleşmesi yok: University of Economics-Varna (Bulgaria) en iyi skor 0.69",
+  "ECHE eşleşmesi yok: University of Split (Croatia) en iyi skor 0.72",
+  "ECHE eşleşmesi yok: Tomas Bata University in Zlin (Czech Republic) en iyi skor 0.56",
+  "ECHE eşleşmesi yok: Newton University (Czech Republic) en iyi skor 0.59",
+  "ECHE eşleşmesi yok: University of Economics and Management (Czech Republic) en iyi skor 0.62",
+  "ECHE eşleşmesi yok: University of Economics, Prague (Czech Republic) en iyi skor 0.71",
+  "ECHE eşleşmesi yok: FAMU-Film and TV School of the Acedemy of Performing Arts (Czech Republic) en iyi skor 0.35",
+  "ECHE eşleşmesi yok: College of Polytechnics Jihlava (Czech Republic) en iyi skor 0.68",
+  "ECHE eşleşmesi yok: Sting Academy (Czech Republic) en iyi skor 0.37",
+  "ECHE eşleşmesi yok: Architectural Institute in Prague (ARCHIP) (Czech Republic) en iyi skor 0.44",
+  "ECHE eşleşmesi yok: Institute of Technology and Business in Ceske Budejovice (Czech Republic) en iyi skor 0.49",
+  "ECHE eşleşmesi yok: Royal Academy of Music, Aalborg (Denmark) en iyi skor 0.46",
+  "ECHE eşleşmesi yok: The Academy of Music and Dramatic Arts, Southern Denmark (Denmark) en iyi skor 0.40",
+  "ECHE eşleşmesi yok: University of Tartu (Estonia) en iyi skor 0.50",
+  "ECHE eşleşmesi yok: Lapland University of Applied Sciences (Finland) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: University of the Arts Helsinki, Sibelius Academy (Finland) en iyi skor 0.36",
+  "ECHE eşleşmesi yok: Oulu University of Applied Sciences (Finland) en iyi skor 0.71",
+  "ECHE eşleşmesi yok: ESC Montpellier (France) en iyi skor 0.74",
+  "ECHE eşleşmesi yok: Groupe Ecole Superieure de Commerce (ESC) de Pau (France) en iyi skor 0.74",
+  "ECHE eşleşmesi yok: Pole Superieur d’Enseignements Artistiques Nord-Pas de Calais (France) en iyi skor 0.76",
+  "ECHE eşleşmesi yok: Ecole Nationale Superieure Louis-Lumiere (France) en iyi skor 0.82",
+  "ECHE eşleşmesi yok: Universite du Littoral Cote d’Opale (France) en iyi skor 0.79",
+  "ECHE eşleşmesi yok: L’ECE : la Grande École de l’Ingénierie Numérique – ECE (France) en iyi skor 0.55",
+  "ECHE eşleşmesi yok: Karlsruhe University of Applied Sciences (Germany) en iyi skor 0.84",
+  "ECHE eşleşmesi yok: University of Potsdam (Germany) en iyi skor 0.83",
+  "ECHE eşleşmesi yok: Hochschule Bremen University of Applied Sciences (Germany) en iyi skor 0.00",
+  "ECHE eşleşmesi yok: University of Münster, School of Business and Economics (Germany) en iyi skor 0.53",
+  "ECHE eşleşmesi yok: Magdeburg Stendal University of Applied Sciences (Germany) en iyi skor 0.81",
+  "ECHE eşleşmesi yok: Munich University of Applied Sciences (Germany) en iyi skor 0.00",
+  "ECHE eşleşmesi yok: Neu-Ulm University of Applied Sciences (Germany) en iyi skor 0.00",
+  "ECHE eşleşmesi yok: University of Music and Performing Arts Stuttgart (Germany) en iyi skor 0.64",
+  "ECHE eşleşmesi yok: Aristotle University of Thessaloniki (Greece) en iyi skor 0.70",
+  "ECHE eşleşmesi yok: University of Western Macedonia (Greece) en iyi skor 0.00",
+  "ECHE eşleşmesi yok: Panteion University Social and Political Sciences (Greece) en iyi skor 0.51",
+  "ECHE eşleşmesi yok: University of West Attica (Greece) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: University of the Aegean (Greece) en iyi skor 0.69",
+  "ECHE eşleşmesi yok: National and Kapodistrian University of Athens (Greece) en iyi skor 0.62",
+  "ECHE eşleşmesi yok: Hungarian University of Agriculture and Life Sciences (Hungary) en iyi skor 0.53",
+  "ECHE eşleşmesi yok: University of Szeged (Hungary) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: University of Miskolc (Hungary) en iyi skor 0.65",
+  "ECHE eşleşmesi yok: University of Rome ‘Tor Vergata’ (Italy) en iyi skor 0.72",
+  "ECHE eşleşmesi yok: Conservatorio Vicenzo Bellini “Palermo” (Italy) en iyi skor 0.65",
+  "ECHE eşleşmesi yok: Conservatoiro di Musica “C.Pollini” (Italy) en iyi skor 0.82",
+  "ECHE eşleşmesi yok: University For Foreigners Perugia (Italy) en iyi skor 0.71",
+  "ECHE eşleşmesi yok: Conservatorio di Musica G.Verdi (Italy) en iyi skor 0.00 — konum da bulunamadı",
+  "ECHE eşleşmesi yok: Istituto Superiore di Studi Musicali “Arturo Toscanini” (Italy) en iyi skor 0.75",
+  "ECHE eşleşmesi yok: University “Kore” of Enna (Italy) en iyi skor 0.63",
+  "ECHE eşleşmesi yok: Conservatorio di Musica F.Veneze Rovigo (Italy) en iyi skor 0.80",
+  "ECHE eşleşmesi yok: ISSM P.Mascagni (Italy) en iyi skor 0.54",
+  "ECHE eşleşmesi yok: Conservatory of Vicenza (Italy) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: Istituto Superiore di Studi Musicali Rinaldo Franci (Italy) en iyi skor 0.79",
+  "ECHE eşleşmesi yok: Accademia IUAD (Institute of Universal Art and Design) (Italy) en iyi skor 0.62",
+  "ECHE eşleşmesi yok: Civica Acuola di Musica Claudio Abbado (Italy) en iyi skor 0.56",
+  "ECHE eşleşmesi yok: Università degli Studi “Gabriele d’Annunzio” (Italy) en iyi skor 0.84",
+  "ECHE eşleşmesi yok: Banku Augstskola (BA School of Business and Finance) (Latvia) en iyi skor 0.52",
+  "ECHE eşleşmesi yok: Latvian Academy of Culture (Latvia) en iyi skor 0.63",
+  "ECHE eşleşmesi yok: EKA University of Applied Sciences (Latvia) en iyi skor 0.49",
+  "ECHE eşleşmesi yok: Vilnius Gediminas Technical University (Lithuania) en iyi skor 0.81",
+  "ECHE eşleşmesi yok: Lithuanian Academy of Music and Theatre (Lithuania) en iyi skor 0.38",
+  "ECHE eşleşmesi yok: Vilnius College of Design (Lithuania) en iyi skor 0.62",
+  "ECHE eşleşmesi yok: University of Information Science and Technology “Saint Paul the Apostle” Ohrid (Macedonia) en iyi skor 0.84",
+  "ECHE eşleşmesi yok: University of Malta (Malta) en iyi skor 0.84",
+  "ECHE eşleşmesi yok: HU University of Applied Sciences Utrecht (Netherlands) en iyi skor 0.80",
+  "ECHE eşleşmesi yok: Stenden University of Applied Sciences (Netherlands) en iyi skor 0.84",
+  "ECHE eşleşmesi yok: Fontys University of Applied Sciences (Netherlands) en iyi skor 0.84",
+  "ECHE eşleşmesi yok: HKU University of the Arts Utrecht (Netherlands) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: Maastricht University, Faculty of Psychology and Neuroscience (FPN) (Netherlands) en iyi skor 0.60",
+  "ECHE eşleşmesi yok: ArtEZ Institute of the Arts (Netherlands) en iyi skor 0.53",
+  "ECHE eşleşmesi yok: Hanze University of Applied Sciences (Netherlands) en iyi skor 0.00",
+  "ECHE eşleşmesi yok: Adam Mickiewicz University in Poznan (Poland) en iyi skor 0.56",
+  "ECHE eşleşmesi yok: Warsaw University (Poland) en iyi skor 0.75",
+  "ECHE eşleşmesi yok: Wroclaw University (Poland) en iyi skor 0.73",
+  "ECHE eşleşmesi yok: College of Social and Media Culture (Poland) en iyi skor 0.50",
+  "ECHE eşleşmesi yok: Lazarski University (Poland) en iyi skor 0.71",
+  "ECHE eşleşmesi yok: Warsaw University of Technology (Poland) en iyi skor 0.73",
+  "ECHE eşleşmesi yok: Polish Naval Academy (Poland) en iyi skor 0.51",
+  "ECHE eşleşmesi yok: Rzeszow University of Technology (Poland) en iyi skor 0.62",
+  "ECHE eşleşmesi yok: University of Information and Technology and Management in Rzeszow (Poland) en iyi skor 0.54",
+  "ECHE eşleşmesi yok: Akademia Muzyczna w Krakowie (Poland) en iyi skor 0.74",
+  "ECHE eşleşmesi yok: University of Zielona Gora (Poland) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: The Academy of Business in Dabrowa Gornicza (Poland) en iyi skor 0.50",
+  "ECHE eşleşmesi yok: The Witelon University of Applied Sciences in Legnica (Poland) en iyi skor 0.81",
+  "ECHE eşleşmesi yok: Jozef Pilsudski University of Physical Education in Warsaw (Poland) en iyi skor 0.54",
+  "ECHE eşleşmesi yok: The Fryderyk Chopin University of Music (Poland) en iyi skor 0.56",
+  "ECHE eşleşmesi yok: Bialystok University of Technology (Poland) en iyi skor 0.57",
+  "ECHE eşleşmesi yok: International University of Logistics and Transport in Wroclaw (Poland) en iyi skor 0.52",
+  "ECHE eşleşmesi yok: The AGH University of Science and Technology (Poland) en iyi skor 0.59",
+  "ECHE eşleşmesi yok: Cracow University of Economics (Poland) en iyi skor 0.68",
+  "ECHE eşleşmesi yok: University of Economics Katowice (Poland) en iyi skor 0.68",
+  "ECHE eşleşmesi yok: The University of Szczecin (Poland) en iyi skor 0.65",
+  "ECHE eşleşmesi yok: University of Silesia in Katowice (Poland) en iyi skor 0.64",
+  "ECHE eşleşmesi yok: Wroclaw University of Science and Technology (Poland) en iyi skor 0.60",
+  "ECHE eşleşmesi yok: The Eugeniusz Geppert Academy of Art and Design in Wroclaw (Poland) en iyi skor 0.51",
+  "ECHE eşleşmesi yok: Civitas University (Poland) en iyi skor 0.73",
+  "ECHE eşleşmesi yok: Instituto Politecnico do Porto & Escola Superior de Media Artes e Design (ESMAD) (Portugal) en iyi skor 0.63",
+  "ECHE eşleşmesi yok: Universidade Lusofona de Humanidades e Tecnologias (Portugal) en iyi skor 0.62",
+  "ECHE eşleşmesi yok: Instituto Politecnico de Portalegre (Portugal) en iyi skor 0.00",
+  "ECHE eşleşmesi yok: ESAD- Escola Superior de Artes e Design (Portugal) en iyi skor 0.71",
+  "ECHE eşleşmesi yok: Instituto Politecnico de Tomar (Portugal) en iyi skor 0.00",
+  "ECHE eşleşmesi yok: University of Algarve (Portugal) en iyi skor 0.82",
+  "ECHE eşleşmesi yok: Transilvania University of Brasov (Romania) en iyi skor 0.65",
+  "ECHE eşleşmesi yok: Singidunum University (Serbia) en iyi skor 0.52",
+  "ECHE eşleşmesi yok: Paneuropean University (Slovakia) en iyi skor 0.44",
+  "ECHE eşleşmesi yok: Catholic University in Ruzomberok (Slovakia) en iyi skor 0.79",
+  "ECHE eşleşmesi yok: Comenius University in Bratislava (Slovakia) en iyi skor 0.69",
+  "ECHE eşleşmesi yok: Academy of Performing Arts in Bratislava (Slovakia) en iyi skor 0.53",
+  "ECHE eşleşmesi yok: Slovak University of Technology in Bratislava (Slovakia) en iyi skor 0.59",
+  "ECHE eşleşmesi yok: Faculty of Design (Slovenia) en iyi skor 0.57",
+  "ECHE eşleşmesi yok: University of Maribor (Slovenia) en iyi skor 0.75",
+  "ECHE eşleşmesi yok: University of Primorska (Slovenia) en iyi skor 0.57",
+  "ECHE eşleşmesi yok: University of Nova Gorica (Slovenia) en iyi skor 0.72",
+  "ECHE eşleşmesi yok: Univerza v Ljubljani Akademija za glasbo (Slovenia) en iyi skor 0.67",
+  "ECHE eşleşmesi yok: University of Deusto (Spain) en iyi skor 0.63",
+  "ECHE eşleşmesi yok: Universidad del Pais Vasco (Spain) en iyi skor 0.76",
+  "ECHE eşleşmesi yok: Escuela Superior Politécnica Tecnocampus (Spain) en iyi skor 0.68",
+  "ECHE eşleşmesi yok: Andalusian School of Design and Art (Spain) en iyi skor 0.49",
+  "ECHE eşleşmesi yok: The Royal Danish Academy of Music (Denmark) en iyi skor 0.55",
+  "ECHE eşleşmesi yok: Saarland University (Germany) en iyi skor 0.56",
+  "ECHE eşleşmesi yok: Poliarte Accademia di Design (Italy) en iyi skor 0.60",
+  "ECHE eşleşmesi yok: Conservatorio di Musica “Agostino Steffani” (Italy) en iyi skor 0.82",
+  "ECHE eşleşmesi yok: Silesian University of Technology (Poland) en iyi skor 0.58",
+  "ECHE eşleşmesi yok: Gdynia Maritime University (Uniwersytet Morski w Gdyni) (Poland) en iyi skor 0.66"
+ ]
+}

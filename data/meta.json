@@ -1,0 +1,28 @@
+{
+ "generated_at": "2026-10-07",
+ "content_hash": "472752752ce6cd642ad06e2952e15808b65d201d53b897381b6555bfd0c4fc14",
+ "term": {
+  "academic_year": "2025-2026"
+ },
+ "stats": {
+  "schools": 232,
+  "programs": 407,
+  "countries": 27,
+  "eche_matched": 99,
+  "with_website": 227,
+  "geocoded": 231,
+  "info": {
+   "language_requirement": 184,
+   "instruction": 191,
+   "fees": 145,
+   "courses_url": 106,
+   "accommodation": 175,
+   "deadlines": 95
+  }
+ },
+ "files": {
+  "general": "general.json",
+  "schools": "schools.json",
+  "programs_csv": "programs.csv"
+ }
+}

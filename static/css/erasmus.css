@@ -1,0 +1,1919 @@
+/* Yaşar Erasmus+ sayfası. Forumun görünümünü korur (Inter, Yaşar mavisi, 8/12 köşe,
+   gölgesiz yüzey + ince çizgi); yenilik kabukta değil içerikte: kalkış tahtası
+   biçiminde okul listesi, kendini çizen rota yayı ve hibe hesabı. */
+
+.yer {
+	--yer-ease: cubic-bezier(0.16, 1, 0.3, 1);
+	--yer-surface: #ffffff;
+	--yer-surface-2: #f2f4f6;
+	--yer-line: #d8dee5;
+	--yer-line-strong: #b4bec9;
+	--yer-muted: #4d5660;
+	--yer-accent: #1a73e8;
+	--yer-accent-text: #1557b0;
+	--yer-accent-soft: rgba(26, 115, 232, 0.12);
+	--yer-on-accent: #ffffff;
+	--yer-sea: #eaf1f8;
+	--yer-land: #d9dfe6;
+	--yer-land-line: #ffffff;
+	--yer-warn: #9a5b00;
+
+	color: inherit;
+	font-size: 14px;
+	line-height: 1.55;
+	max-width: 1040px;
+	margin: 0 auto;
+	padding: 4px 0 32px;
+}
+
+[data-bs-theme='dark'] .yer,
+:root[data-theme='dark'] .yer {
+	--yer-surface: #292a2d;
+	--yer-surface-2: #303134;
+	--yer-line: #404247;
+	--yer-line-strong: #5d6066;
+	--yer-muted: #b9bfc6;
+	--yer-accent: #2b7de9;
+	--yer-accent-text: #9cc3ff;
+	--yer-accent-soft: rgba(138, 180, 255, 0.2);
+	--yer-sea: #1e2227;
+	--yer-land: #34383d;
+	--yer-land-line: #1e2227;
+	--yer-warn: #e8a33d;
+}
+
+.yer *,
+.yer *::before,
+.yer *::after {
+	box-sizing: border-box;
+}
+
+.yer :where(h1, h2, h3, p, dl, dd, ol, ul, figure) {
+	margin: 0;
+	padding: 0;
+}
+
+.yer :where(ol, ul) {
+	list-style: none;
+}
+
+.yer :where(button, input, select) {
+	font: inherit;
+	color: inherit;
+}
+
+.yer :where(button) {
+	cursor: pointer;
+}
+
+.yer :focus-visible {
+	outline: 2px solid var(--yer-accent-text);
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.yer ::selection {
+	background: var(--yer-accent-soft);
+}
+
+.yer-i {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	flex: none;
+	vertical-align: -0.125em;
+}
+
+.yer-sr {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.yer-num {
+	font-variant-numeric: tabular-nums;
+}
+
+.yer-muted {
+	color: var(--yer-muted);
+}
+
+/* ------------------------------------------------------------ başlık */
+
+.yer-head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 24px;
+	padding-bottom: 20px;
+}
+
+.yer-title {
+	font-size: 36px;
+	line-height: 1.1;
+	font-weight: 800;
+	letter-spacing: -0.025em;
+	text-wrap: balance;
+	max-width: 16ch;
+}
+
+.yer-lede {
+	margin-top: 10px;
+	font-size: 17px;
+	line-height: 1.4;
+}
+
+.yer-meta {
+	margin-top: 8px;
+	font-size: 13px;
+	color: var(--yer-muted);
+}
+
+.yer-status {
+	flex: none;
+	display: grid;
+	gap: 2px;
+	max-width: 260px;
+	padding-left: 16px;
+	border-left: 1px solid var(--yer-line-strong);
+	font-size: 13px;
+}
+
+.yer-status span {
+	color: var(--yer-muted);
+}
+
+.yer-link {
+	color: var(--yer-accent-text);
+	font-weight: 600;
+	text-decoration: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.yer-link:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+.yer-i--ext {
+	font-size: 11px;
+	opacity: 0.8;
+}
+
+.yer-tabs {
+	display: flex;
+	width: fit-content;
+	max-width: 100%;
+	margin: 4px auto 28px;
+	padding: 5px;
+	gap: 4px;
+	background: var(--yer-surface);
+	border: 1px solid var(--yer-line);
+	border-radius: 14px;
+	overflow-x: auto;
+	scrollbar-width: none;
+}
+
+.yer-tab {
+	padding: 9px 18px;
+	border-radius: 10px;
+	color: var(--yer-muted);
+	font-weight: 600;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: color 160ms var(--yer-ease), background-color 160ms var(--yer-ease), transform 160ms var(--yer-ease);
+}
+
+.yer-tab:hover {
+	color: inherit;
+	background: var(--yer-surface-2);
+}
+
+.yer-tab:active {
+	transform: scale(0.97);
+}
+
+.yer-tab[aria-current='page'],
+.yer-tab[aria-current='page']:hover {
+	color: var(--yer-on-accent);
+	background: var(--yer-accent);
+}
+
+.yer-h1 {
+	font-size: 26px;
+	line-height: 1.2;
+	font-weight: 700;
+	letter-spacing: -0.012em;
+	text-wrap: balance;
+}
+
+.yer-h2 {
+	font-size: 17px;
+	line-height: 1.3;
+	font-weight: 700;
+}
+
+.yer-h3 {
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.yer [data-focus]:focus {
+	outline: none;
+}
+
+.yer-block {
+	margin-top: 36px;
+}
+
+.yer-block--first {
+	margin-top: 0;
+}
+
+.yer-block > .yer-h2 {
+	margin-bottom: 12px;
+}
+
+.yer-note {
+	color: var(--yer-muted);
+	margin: 0 0 12px;
+	max-width: 68ch;
+	text-wrap: pretty;
+}
+
+.yer-block > p {
+	max-width: 68ch;
+	text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------ düğmeler */
+
+.yer-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	min-height: 40px;
+	padding: 0 16px;
+	border-radius: 8px;
+	border: 1px solid transparent;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background-color 140ms var(--yer-ease), border-color 140ms var(--yer-ease), transform 140ms var(--yer-ease);
+}
+
+.yer-btn:active {
+	transform: scale(0.98);
+}
+
+.yer-btn--primary {
+	background: var(--yer-accent);
+	color: var(--yer-on-accent);
+}
+
+.yer-btn--primary:hover {
+	background: #1668d3;
+}
+
+.yer-btn--outline {
+	background: var(--yer-surface);
+	border-color: var(--yer-line-strong);
+}
+
+.yer-btn--outline:hover {
+	background: var(--yer-surface-2);
+}
+
+.yer-textbtn {
+	background: none;
+	border: 0;
+	padding: 4px 0;
+	color: var(--yer-accent-text);
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.yer-textbtn:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+}
+
+
+/* ------------------------------------------------------------ bilet */
+/* Okul bulma akışının kendisi: İzmir'den kalkan bir uçuş bileti. Her adımda uçak
+   biraz daha ilerler, seçtiğin bölüm, ülke ve okul bilete işlenir. */
+
+.yer-ticket {
+	--yer-page: #ffffff;
+	--p: 0;
+	position: relative;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 200px;
+	background: var(--yer-surface);
+	border: 1px solid var(--yer-line);
+	border-radius: 14px;
+}
+
+[data-bs-theme='dark'] .yer-ticket,
+:root[data-theme='dark'] .yer-ticket {
+	--yer-page: #202124;
+}
+
+.yer-ticket__main {
+	min-width: 0;
+	padding: 18px 22px 8px;
+}
+
+.yer-ticket__route {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	font-size: 20px;
+	font-weight: 800;
+	letter-spacing: -0.01em;
+}
+
+.yer-ticket__end--to {
+	min-width: 5.5ch;
+	text-align: right;
+	color: var(--yer-muted);
+	font-weight: 700;
+	transition: color 300ms var(--yer-ease);
+}
+
+.yer-ticket.is-arrived .yer-ticket__end--to {
+	color: inherit;
+}
+
+.yer-ticket__line {
+	position: relative;
+	flex: 1;
+	height: 24px;
+	min-width: 60px;
+}
+
+.yer-ticket__line::before {
+	content: '';
+	position: absolute;
+	left: 4px;
+	right: 4px;
+	top: 50%;
+	border-top: 2px dashed var(--yer-line-strong);
+}
+
+.yer-ticket__line::after {
+	content: '';
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	height: 2px;
+	margin-top: -1px;
+	width: calc(var(--p) * (100% - 8px));
+	background: var(--yer-accent);
+	border-radius: 1px;
+	transition: width 720ms var(--yer-ease);
+}
+
+.yer-ticket__plane {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: calc(4px + var(--p) * (100% - 8px));
+	width: 28px;
+	height: 28px;
+	display: grid;
+	place-items: center;
+	translate: -50% -50%;
+	color: var(--yer-accent-text);
+	transition: left 720ms var(--yer-ease);
+}
+
+.yer-plane {
+	width: 18px;
+	height: 18px;
+	fill: currentColor;
+	transform: rotate(90deg);
+}
+
+.yer-ticket.is-arrived .yer-ticket__plane {
+	animation: yer-land 520ms var(--yer-ease) 640ms both;
+}
+
+@keyframes yer-land {
+	40% {
+		transform: translateY(-3px) scale(1.12);
+	}
+}
+
+.yer-slots {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	margin-top: 8px;
+}
+
+.yer-slot {
+	min-width: 0;
+	border-left: 1px solid var(--yer-line);
+}
+
+.yer-slot:first-child {
+	border-left: 0;
+}
+
+.yer-slot > a,
+.yer-slot > span {
+	display: block;
+	padding: 10px 16px 14px;
+	color: inherit;
+	text-decoration: none;
+}
+
+.yer-slot:first-child > a,
+.yer-slot:first-child > span {
+	padding-left: 0;
+}
+
+.yer-slot > a {
+	border-radius: 8px;
+	transition: background-color 140ms var(--yer-ease);
+}
+
+.yer-slot > a:hover {
+	background: var(--yer-accent-soft);
+}
+
+.yer-slot__label {
+	display: block;
+	font-size: 12.5px;
+	color: var(--yer-muted);
+}
+
+.yer-slot__value {
+	display: block;
+	font-size: 15px;
+	line-height: 1.3;
+	font-weight: 700;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.yer-slot.is-todo .yer-slot__value {
+	color: var(--yer-muted);
+	font-weight: 500;
+}
+
+.yer-slot.is-current .yer-slot__value {
+	color: var(--yer-accent-text);
+}
+
+.yer-slot__value.is-new {
+	animation: yer-stamp 460ms var(--yer-ease) both;
+}
+
+@keyframes yer-stamp {
+	from {
+		opacity: 0;
+		transform: translateY(10px) scale(0.96);
+	}
+}
+
+.yer-ticket__stub {
+	position: relative;
+	display: grid;
+	align-content: center;
+	gap: 14px;
+	padding: 16px 22px;
+	border-left: 2px dashed var(--yer-line-strong);
+}
+
+.yer-ticket__stub strong {
+	display: block;
+	font-size: 22px;
+	line-height: 1.15;
+	font-weight: 800;
+	letter-spacing: -0.01em;
+}
+
+.yer-ticket__stub strong.is-empty {
+	color: var(--yer-muted);
+	font-weight: 500;
+}
+
+/* Biletin yırtma çentikleri: kenarda yarım daire, sayfa renginde. */
+.yer-ticket__stub::before,
+.yer-ticket__stub::after {
+	content: '';
+	position: absolute;
+	left: -11px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: var(--yer-page);
+	border: 1px solid var(--yer-line);
+}
+
+.yer-ticket__stub::before {
+	top: -11px;
+	clip-path: inset(50% 0 0 0);
+}
+
+.yer-ticket__stub::after {
+	bottom: -11px;
+	clip-path: inset(0 0 50% 0);
+}
+
+/* ------------------------------------------------------------ adımlar */
+
+.yer-stage {
+	margin-top: 32px;
+}
+
+.yer-stage.is-in {
+	animation: yer-step-in 360ms var(--yer-ease) both;
+}
+
+.yer-stage.is-in[data-dir='back'] {
+	animation-name: yer-step-back;
+}
+
+@keyframes yer-step-in {
+	from {
+		opacity: 0;
+		transform: translateX(18px);
+	}
+}
+
+@keyframes yer-step-back {
+	from {
+		opacity: 0;
+		transform: translateX(-18px);
+	}
+}
+
+.yer-step__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 12px 24px;
+	margin-bottom: 14px;
+}
+
+.yer-step > .yer-h2 {
+	margin-bottom: 14px;
+}
+
+.yer-step__head > .yer-h2 {
+	font-size: 22px;
+	letter-spacing: -0.01em;
+}
+
+.yer-step > .yer-h2,
+.yer-view > .yer-step__head > .yer-h2 {
+	font-size: 22px;
+	letter-spacing: -0.01em;
+}
+
+.yer-cards {
+	display: grid;
+	column-gap: 0;
+}
+
+.yer-cards--3 {
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.yer-cards--4 {
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.yer-card,
+.yer-pick {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 14px 0;
+	border-bottom: 1px solid var(--yer-line);
+	border-radius: 0;
+	color: inherit;
+	text-decoration: none;
+	animation: yer-card-in 380ms var(--yer-ease) both;
+	animation-delay: calc(var(--i, 0) * 24ms);
+	transition: background-color 140ms var(--yer-ease), transform 140ms var(--yer-ease);
+}
+
+@keyframes yer-card-in {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+}
+
+.yer-cards > .yer-card {
+	padding-right: 24px;
+}
+
+.yer-card:active,
+.yer-pick:active {
+	transform: scale(0.99);
+}
+
+.yer-card > .yer-i,
+.yer-pick > .yer-i {
+	font-size: 12px;
+	color: var(--yer-muted);
+	transition: transform 160ms var(--yer-ease), color 160ms var(--yer-ease);
+}
+
+.yer-card:hover > .yer-i,
+.yer-pick:hover > .yer-i {
+	color: var(--yer-accent-text);
+	transform: translateX(3px);
+}
+
+.yer-card:hover .yer-card__name,
+.yer-pick:hover .yer-pick__name {
+	color: var(--yer-accent-text);
+}
+
+.yer-card__name,
+.yer-pick__name {
+	display: block;
+	font-weight: 700;
+	text-wrap: pretty;
+	transition: color 140ms var(--yer-ease);
+}
+
+.yer-card__meta,
+.yer-pick__city {
+	display: block;
+	margin-top: 2px;
+	font-size: 13px;
+	color: var(--yer-muted);
+}
+
+.yer-card > .yer-card__name {
+	flex: 1;
+	min-width: 0;
+}
+
+.yer-count {
+	flex: none;
+	min-width: 32px;
+	padding: 3px 9px;
+	border-radius: 999px;
+	font-size: 13px;
+	font-weight: 700;
+	font-variant-numeric: tabular-nums;
+	text-align: center;
+	color: var(--yer-accent-text);
+	background: var(--yer-accent-soft);
+}
+
+.yer-list {
+	display: grid;
+}
+
+.yer-pick {
+	padding: 12px 0;
+}
+
+.yer-pick__km {
+	margin-left: auto;
+	color: var(--yer-muted);
+	white-space: nowrap;
+}
+
+.yer-input {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	height: 40px;
+	width: min(100%, 320px);
+	padding: 0 12px;
+	background: var(--yer-surface);
+	border: 1px solid var(--yer-line-strong);
+	border-radius: 10px;
+	color: var(--yer-muted);
+}
+
+.yer-input:focus-within {
+	border-color: var(--yer-accent);
+	box-shadow: 0 0 0 3px var(--yer-accent-soft);
+}
+
+.yer-input input {
+	flex: 1;
+	min-width: 0;
+	border: 0;
+	background: none;
+	outline: none;
+	height: 100%;
+	color: inherit;
+}
+
+.yer-input input::placeholder {
+	color: var(--yer-muted);
+	opacity: 0.85;
+}
+
+.yer-quota {
+	margin-top: 32px;
+	color: var(--yer-muted);
+	max-width: 70ch;
+}
+
+.yer-quota .yer-link {
+	margin-left: 12px;
+	white-space: nowrap;
+}
+
+.yer-note--end {
+	margin-top: 24px;
+}
+
+.yer-step--school > .yer-h1 {
+	margin-bottom: 16px;
+}
+
+/* ------------------------------------------------------------ boş ve hata durumları */
+
+.yer-state {
+	display: grid;
+	justify-items: center;
+	gap: 10px;
+	padding: 40px 16px;
+	text-align: center;
+	border: 1px dashed var(--yer-line-strong);
+	border-radius: 12px;
+}
+
+.yer-state > .yer-i {
+	font-size: 22px;
+	color: var(--yer-warn);
+}
+
+.yer-state p {
+	max-width: 46ch;
+	color: var(--yer-muted);
+}
+
+.yer-state__title {
+	font-size: 17px;
+	font-weight: 700;
+}
+
+/* ------------------------------------------------------------ okul sayfası */
+
+.yer-split {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 320px;
+	gap: 16px;
+	margin-top: 20px;
+	align-items: stretch;
+}
+
+.yer-route {
+	display: flex;
+	border: 1px solid var(--yer-line);
+	border-radius: 12px;
+	overflow: hidden;
+	background: var(--yer-sea);
+}
+
+.yer-route svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 2.1;
+}
+
+.yer-route--none {
+	padding: 32px 16px;
+	color: var(--yer-muted);
+	text-align: center;
+}
+
+.yer-route__sea {
+	fill: var(--yer-sea);
+}
+
+.yer-route__land path {
+	fill: var(--yer-land);
+	stroke: var(--yer-land-line);
+	stroke-width: 1;
+	vector-effect: non-scaling-stroke;
+}
+
+.yer-route__trail,
+.yer-route__arc {
+	fill: none;
+	stroke: var(--yer-accent-text);
+	stroke-linecap: round;
+}
+
+.yer-route__trail {
+	opacity: 0.22;
+}
+
+.yer-route__arc {
+	stroke-dasharray: 1;
+	stroke-dashoffset: 0;
+}
+
+.yer-route__pin {
+	fill: var(--yer-accent);
+	stroke: var(--yer-surface);
+	stroke-width: 1.5;
+	vector-effect: non-scaling-stroke;
+}
+
+.yer-route__pin--home {
+	fill: var(--yer-muted);
+}
+
+.yer-route__dot {
+	fill: #fff;
+	stroke: var(--yer-accent);
+	stroke-width: 2;
+	vector-effect: non-scaling-stroke;
+}
+
+.yer-route__label {
+	font-weight: 600;
+	fill: currentColor;
+	paint-order: stroke;
+	stroke: var(--yer-sea);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+}
+
+.yer-calc {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	background: var(--yer-surface);
+	border: 1px solid var(--yer-line);
+	border-radius: 12px;
+}
+
+.yer-calc > .yer-h3 {
+	margin-bottom: 12px;
+}
+
+.yer-calc__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.yer-calc__label {
+	font-weight: 600;
+}
+
+.yer-stepper {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid var(--yer-line-strong);
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.yer-stepper button {
+	width: 36px;
+	height: 36px;
+	display: grid;
+	place-items: center;
+	border: 0;
+	background: var(--yer-surface-2);
+	font-size: 12px;
+}
+
+.yer-stepper button:hover:not(:disabled) {
+	background: var(--yer-accent-soft);
+	color: var(--yer-accent-text);
+}
+
+.yer-stepper button:disabled {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.yer-stepper output {
+	min-width: 56px;
+	text-align: center;
+	font-weight: 700;
+}
+
+.yer-switch {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin-top: 12px;
+	cursor: pointer;
+	line-height: 1.4;
+}
+
+.yer-switch input {
+	position: absolute;
+	opacity: 0;
+	width: 1px;
+	height: 1px;
+}
+
+.yer-switch__box {
+	flex: none;
+	width: 18px;
+	height: 18px;
+	margin-top: 1px;
+	border: 1.5px solid var(--yer-line-strong);
+	border-radius: 5px;
+	background: var(--yer-surface);
+	display: grid;
+	place-items: center;
+	transition: background-color 140ms var(--yer-ease), border-color 140ms var(--yer-ease);
+}
+
+.yer-switch input:checked + .yer-switch__box {
+	background: var(--yer-accent);
+	border-color: var(--yer-accent);
+}
+
+.yer-switch input:checked + .yer-switch__box::after {
+	content: '';
+	width: 9px;
+	height: 5px;
+	border-left: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	transform: translateY(-1px) rotate(-45deg);
+}
+
+.yer-switch input:focus-visible + .yer-switch__box {
+	outline: 2px solid var(--yer-accent-text);
+	outline-offset: 2px;
+}
+
+.yer-calc__lines {
+	margin-top: 14px;
+	border-top: 1px solid var(--yer-line);
+}
+
+.yer-calc__lines > div {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 8px 0;
+	border-bottom: 1px solid var(--yer-line);
+}
+
+.yer-calc__lines dt {
+	color: var(--yer-muted);
+}
+
+.yer-calc__lines dt .yer-muted {
+	display: block;
+	font-size: 12px;
+}
+
+.yer-calc__lines dd {
+	white-space: nowrap;
+	font-weight: 600;
+}
+
+.yer-calc__total {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	margin-top: 12px;
+	font-weight: 600;
+}
+
+.yer-calc__total strong {
+	font-size: 28px;
+	line-height: 1.1;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+}
+
+.yer-calc__note {
+	margin-top: 10px;
+	font-size: 12.5px;
+	line-height: 1.5;
+	color: var(--yer-muted);
+}
+
+.yer-info {
+	border-top: 1px solid var(--yer-line);
+}
+
+.yer-info__row {
+	display: grid;
+	grid-template-columns: 180px minmax(0, 1fr);
+	gap: 4px 16px;
+	padding: 12px 0;
+	border-bottom: 1px solid var(--yer-line);
+}
+
+.yer-info__row dt {
+	font-weight: 600;
+}
+
+.yer-info__row dd > p + p {
+	margin-top: 6px;
+}
+
+.yer-info__row dd {
+	max-width: 70ch;
+	text-wrap: pretty;
+}
+
+.yer-info__row.is-missing dd {
+	color: var(--yer-muted);
+}
+
+.yer-info__more {
+	margin-top: 14px;
+}
+
+.yer-info__src {
+	margin-top: 10px;
+	font-size: 12.5px;
+	color: var(--yer-muted);
+	max-width: 70ch;
+}
+
+
+/* ------------------------------------------------------------ yol haritası */
+
+.yer-next {
+	display: grid;
+	justify-items: start;
+	gap: 6px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid var(--yer-line);
+}
+
+.yer-next p {
+	max-width: 62ch;
+}
+
+.yer-steps {
+	position: relative;
+	border-left: 2px solid var(--yer-line-strong);
+	margin-left: 5px;
+}
+
+.yer-steps li {
+	position: relative;
+	display: grid;
+	grid-template-columns: 240px minmax(0, 1fr);
+	gap: 2px 16px;
+	padding: 0 0 18px 20px;
+}
+
+.yer-steps li:last-child {
+	padding-bottom: 0;
+}
+
+.yer-steps li::before {
+	content: '';
+	position: absolute;
+	left: -7px;
+	top: 5px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: var(--yer-surface);
+	border: 2px solid var(--yer-line-strong);
+}
+
+.yer-steps__label {
+	font-weight: 600;
+}
+
+.yer-steps__when {
+	color: var(--yer-muted);
+}
+
+.yer-defs {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	border-top: 1px solid var(--yer-line);
+}
+
+.yer-defs > div:nth-child(odd) {
+	padding-right: 32px;
+}
+
+.yer-defs > div:nth-child(even) {
+	padding-left: 32px;
+}
+
+.yer-defs > div {
+	padding: 12px 0;
+	border-bottom: 1px solid var(--yer-line);
+}
+
+.yer-defs dt {
+	font-weight: 600;
+}
+
+.yer-defs dd {
+	color: var(--yer-muted);
+	text-wrap: pretty;
+}
+
+/* ------------------------------------------------------------ hibe tabloları */
+
+.yer-table {
+	width: 100%;
+	border-collapse: collapse;
+	background: var(--yer-surface);
+	border: 1px solid var(--yer-line);
+	border-radius: 12px;
+	overflow: hidden;
+	border-spacing: 0;
+}
+
+.yer-table th,
+.yer-table td {
+	padding: 10px 16px;
+	text-align: left;
+	vertical-align: top;
+	border-top: 1px solid var(--yer-line);
+}
+
+.yer-table thead th {
+	border-top: 0;
+	font-size: 13px;
+	color: var(--yer-muted);
+	background: var(--yer-surface-2);
+}
+
+.yer-table tbody th {
+	font-weight: 600;
+}
+
+.yer-table .yer-num {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.yer-table__wrap {
+	color: var(--yer-muted);
+}
+
+/* ------------------------------------------------------------ sık sorulanlar */
+
+.yer-faq {
+	display: grid;
+	gap: 8px;
+}
+
+.yer-qa {
+	background: var(--yer-surface);
+	border: 1px solid var(--yer-line);
+	border-radius: 10px;
+}
+
+.yer-qa summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 16px;
+	font-weight: 600;
+	cursor: pointer;
+	list-style: none;
+}
+
+.yer-qa summary::-webkit-details-marker {
+	display: none;
+}
+
+.yer-qa summary .yer-i {
+	font-size: 12px;
+	color: var(--yer-muted);
+	transition: transform 220ms var(--yer-ease);
+}
+
+.yer-qa[open] summary .yer-i {
+	transform: rotate(180deg);
+}
+
+.yer-qa[open] {
+	border-color: var(--yer-line-strong);
+}
+
+.yer-qa__a {
+	padding: 0 16px 14px;
+	max-width: 72ch;
+	text-wrap: pretty;
+}
+
+.yer-qa__src {
+	margin-top: 8px;
+	font-size: 12.5px;
+	color: var(--yer-muted);
+}
+
+/* ------------------------------------------------------------ altlık */
+
+.yer-foot {
+	margin-top: 48px;
+	padding-top: 16px;
+	border-top: 1px solid var(--yer-line);
+	font-size: 12.5px;
+	color: var(--yer-muted);
+	display: grid;
+	gap: 4px;
+	max-width: 76ch;
+}
+
+
+/* ------------------------------------------------------------ dar ekran */
+
+@media (max-width: 900px) {
+	.yer-split {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-cards--4 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	.yer-head {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.yer-status {
+		max-width: none;
+		width: 100%;
+	}
+}
+
+@media (max-width: 760px) {
+	.yer-title {
+		font-size: 28px;
+	}
+
+	.yer-cards--3,
+	.yer-cards--4 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.yer-ticket {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-ticket__main {
+		padding: 16px 16px 4px;
+	}
+
+	.yer-slots {
+		grid-template-columns: minmax(0, 1fr);
+		margin-top: 4px;
+	}
+
+	.yer-slot {
+		border-left: 0;
+		border-top: 1px solid var(--yer-line);
+	}
+
+	.yer-slot:first-child {
+		border-top: 0;
+	}
+
+	.yer-slot > a,
+	.yer-slot > span {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 12px;
+		padding: 10px 0;
+	}
+
+	.yer-slot:first-child > a,
+	.yer-slot:first-child > span {
+		padding-left: 0;
+	}
+
+	.yer-slot__value {
+		text-align: right;
+	}
+
+	.yer-ticket__stub {
+		grid-template-columns: 1fr 1fr;
+		border-left: 0;
+		border-top: 2px dashed var(--yer-line-strong);
+		padding: 14px 16px;
+	}
+
+	.yer-ticket__stub::before,
+	.yer-ticket__stub::after {
+		top: -11px;
+		bottom: auto;
+		clip-path: none;
+	}
+
+	.yer-ticket__stub::before {
+		left: -11px;
+		clip-path: inset(0 50% 0 0);
+	}
+
+	.yer-ticket__stub::after {
+		left: auto;
+		right: -11px;
+		clip-path: inset(0 0 0 50%);
+	}
+
+	.yer-info__row {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-steps li {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-defs {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-table th,
+	.yer-table td {
+		padding: 9px 12px;
+	}
+
+	.yer-h1 {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 480px) {
+	.yer-cards--3,
+	.yer-cards--4 {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-ticket__route {
+		font-size: 17px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.yer *,
+	.yer *::before,
+	.yer *::after {
+		animation: none !important;
+		transition: none !important;
+	}
+}
+
+/* ------------------------------------------------------------ yükleniyor */
+
+.yer-skel {
+	display: grid;
+	gap: 20px;
+}
+
+.yer-skel i,
+.yer-skel__bar {
+	display: block;
+	border-radius: 8px;
+	background: var(--yer-surface-2);
+	animation: yer-pulse 1.4s ease-in-out infinite alternate;
+}
+
+.yer-skel__bar--title {
+	width: 180px;
+	height: 32px;
+}
+
+.yer-skel__chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.yer-skel__chips i {
+	width: 96px;
+	height: 36px;
+}
+
+.yer-skel__rows {
+	display: grid;
+	gap: 8px;
+}
+
+.yer-skel__rows i {
+	height: 52px;
+}
+
+@keyframes yer-pulse {
+	from {
+		opacity: 0.55;
+	}
+}
+/* Hibe kartı haritayla aynı boyda: toplam satırı kartın altına yaslanır. */
+.yer-calc > [data-calc] {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.yer-calc__total {
+	margin-top: auto;
+	padding-top: 16px;
+}
+
+/* Okul bilgisi sayfaya yayılır: iki sütun, etiket üstte. */
+.yer-info {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	column-gap: 48px;
+}
+
+.yer-info__row {
+	grid-template-columns: minmax(0, 1fr);
+	gap: 4px;
+	padding: 14px 0;
+}
+
+.yer-info__row dt {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--yer-muted);
+}
+
+.yer-info__row dd,
+.yer-info__src,
+.yer-foot {
+	max-width: none;
+}
+
+.yer-info__foot {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 6px 24px;
+	margin-top: 14px;
+}
+
+.yer-info__foot .yer-info__more,
+.yer-info__foot .yer-info__src {
+	margin: 0;
+}
+
+.yer-quota {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 8px 24px;
+	max-width: none;
+	margin-top: 28px;
+	padding-top: 16px;
+	border-top: 1px solid var(--yer-line);
+}
+
+.yer-quota__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 24px;
+}
+
+.yer-quota .yer-link {
+	margin-left: 0;
+}
+
+.yer-foot {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 6px 24px;
+}
+
+@media (max-width: 760px) {
+	.yer-info {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-tabs {
+		width: 100%;
+	}
+}
+
+/* Başlık ile "Sıradaki ilan" yan yana, aynı boyda. */
+.yer-head {
+	align-items: stretch;
+}
+
+.yer-status {
+	align-content: center;
+}
+
+/* Seçim başlayınca başlık tek satıra iner. */
+.yer-title,
+.yer-head {
+	transition: font-size 320ms var(--yer-ease), padding 320ms var(--yer-ease);
+}
+
+.yer.is-compact .yer-head {
+	padding-bottom: 8px;
+}
+
+.yer.is-compact .yer-title {
+	font-size: 22px;
+	max-width: none;
+	letter-spacing: -0.01em;
+}
+
+.yer.is-compact .yer-lede,
+.yer.is-compact .yer-meta,
+.yer.is-compact .yer-status {
+	display: none;
+}
+
+.yer.is-compact .yer-tabs {
+	margin-bottom: 18px;
+}
+
+.yer.is-compact .yer-stage {
+	margin-top: 22px;
+}
+
+.yer-step--school > .yer-h1 {
+	font-size: 22px;
+	margin-bottom: 12px;
+}
+
+/* ------------------------------------------------------------ vurgu ve okunurluk */
+
+.yer-block > .yer-h2,
+.yer-next > .yer-h2 {
+	font-size: 19px;
+	letter-spacing: -0.01em;
+}
+
+.yer-defs dd,
+.yer-table__wrap {
+	color: inherit;
+}
+
+.yer-defs dt {
+	margin-bottom: 2px;
+}
+
+.yer-backlink {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	margin: 0 0 10px -8px;
+	padding: 6px 8px;
+	border-radius: 8px;
+	color: var(--yer-muted);
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: color 140ms var(--yer-ease), background-color 140ms var(--yer-ease);
+}
+
+.yer-backlink:hover {
+	color: var(--yer-accent-text);
+	background: var(--yer-accent-soft);
+}
+
+.yer-backlink .yer-i {
+	font-size: 11px;
+}
+
+.yer-slot__label {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.yer-slot__edit {
+	color: var(--yer-accent-text);
+	font-weight: 600;
+	opacity: 0;
+	transition: opacity 140ms var(--yer-ease);
+}
+
+.yer-slot > a:hover .yer-slot__edit,
+.yer-slot > a:focus-visible .yer-slot__edit {
+	opacity: 1;
+}
+
+@media (hover: none) {
+	.yer-slot__edit {
+		opacity: 1;
+	}
+}
+
+.yer-slot.is-current > span {
+	box-shadow: inset 0 -2px 0 var(--yer-accent);
+}
+
+/* Yol haritası */
+.yer-next {
+	padding: 18px 20px;
+	border: 0;
+	border-radius: 12px;
+	background: var(--yer-accent-soft);
+}
+
+.yer-steps {
+	margin-top: 4px;
+	border-left-color: var(--yer-line-strong);
+}
+
+.yer-steps li::before {
+	border-color: var(--yer-accent-text);
+}
+
+.yer-steps__when {
+	color: inherit;
+	font-weight: 600;
+}
+
+/* Hibe */
+.yer-rates {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 40px;
+	border-top: 1px solid var(--yer-line);
+	padding-top: 16px;
+}
+
+.yer-rate + .yer-rate {
+	padding-left: 40px;
+	border-left: 1px solid var(--yer-line);
+}
+
+.yer-rate__sum {
+	display: flex;
+	align-items: baseline;
+	gap: 8px;
+	color: var(--yer-muted);
+}
+
+.yer-rate__sum strong {
+	font-size: 34px;
+	line-height: 1.1;
+	font-weight: 800;
+	letter-spacing: -0.02em;
+	color: var(--yer-accent-text);
+}
+
+.yer-rate__group {
+	margin-top: 4px;
+	font-weight: 700;
+}
+
+.yer-rate__list {
+	margin-top: 6px;
+	color: var(--yer-muted);
+	text-wrap: pretty;
+}
+
+.yer .yer-table {
+	margin: 0;
+	table-layout: fixed;
+	border-collapse: separate;
+}
+
+.yer .yer-table th,
+.yer .yer-table td {
+	background: none;
+	color: inherit;
+	border-bottom: 0;
+}
+
+.yer .yer-table thead th {
+	background: var(--yer-surface-2);
+	color: var(--yer-muted);
+	font-weight: 600;
+}
+
+.yer .yer-table tbody th {
+	text-align: left;
+	font-weight: 600;
+}
+
+.yer-table + .yer-note {
+	margin-top: 10px;
+}
+
+.yer-note {
+	margin-bottom: 12px;
+}
+
+@media (max-width: 760px) {
+	.yer-rates {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-rate + .yer-rate {
+		margin-top: 16px;
+		padding: 16px 0 0;
+		border-left: 0;
+		border-top: 1px solid var(--yer-line);
+	}
+}
+
+.yer-head {
+	align-items: center;
+}
+
+.yer-status {
+	align-self: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+/* Notlar ve tanım satırları sayfa genişliğine yayılır. */
+.yer-note,
+.yer-block > p,
+.yer-next p,
+.yer-qa__a {
+	max-width: none;
+}
+
+.yer-defs > div:last-child:nth-child(odd) {
+	grid-column: 1 / -1;
+	padding-right: 0;
+}
+
+.yer-rate__sum span {
+	font-size: 18px;
+	font-weight: 700;
+	color: inherit;
+}
+
+/* Takvim: geniş ekranda soldan sağa, eşit aralıklı; dar ekranda alt alta. */
+@media (min-width: 761px) {
+	.yer-steps {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-columns: minmax(0, 1fr);
+		margin: 8px 0 0;
+		border-left: 0;
+	}
+
+	.yer-steps li {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		justify-items: center;
+		gap: 4px;
+		padding: 26px 8px 0;
+		text-align: center;
+	}
+
+	.yer-steps li::before {
+		left: 50%;
+		top: 0;
+		z-index: 1;
+		transform: translateX(-50%);
+	}
+
+	.yer-steps li::after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 50%;
+		width: 100%;
+		height: 2px;
+		background: var(--yer-line-strong);
+	}
+
+	.yer-steps li:last-child::after {
+		content: none;
+	}
+
+	.yer-steps__label {
+		color: var(--yer-muted);
+	}
+}
+
+@media (max-width: 760px) {
+	.yer-defs {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.yer-defs > div:nth-child(n) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.yer-steps li {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+/* Vurgu: önemli sayı ve tarihler mavi, kutular belirgin. */
+.yer-status {
+	border-left: 3px solid var(--yer-accent);
+}
+
+.yer-status strong {
+	color: var(--yer-accent-text);
+}
+
+.yer-next {
+	border-left: 4px solid var(--yer-accent);
+}
+
+.yer-steps__when,
+.yer-defs dt,
+.yer-rate__group {
+	color: var(--yer-accent-text);
+}
+
+.yer-steps li::before {
+	background: var(--yer-accent);
+	border-color: var(--yer-accent);
+}
+
+.yer-count {
+	color: var(--yer-on-accent);
+	background: var(--yer-accent);
+}
+
+.yer .yer-table tbody td {
+	font-weight: 600;
+}
+
+.yer-calc__total strong,
+.yer-qa[open] > summary {
+	color: var(--yer-accent-text);
+}
+
+/* Okul bilgisi: sütun arası boşluk yerine iç boşluk, çizgi kesintisiz; etiket ve metin üstte toplu. */
+.yer-info {
+	column-gap: 0;
+}
+
+.yer-info__row {
+	align-content: start;
+}
+
+.yer-info__row:nth-child(odd) {
+	padding-right: 32px;
+}
+
+.yer-info__row:nth-child(even) {
+	padding-left: 32px;
+}
+
+.yer-info__row dd,
+.yer-info__row dd > p {
+	margin: 0;
+}
+
+.yer-info__row dd > p + p {
+	margin-top: 6px;
+}
+
+@media (max-width: 760px) {
+	.yer-info__row:nth-child(n) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/* Okul sayfası: forumdaki konular */
+.yer-topics__head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 8px;
+}
+
+.yer-topics__head > .yer-h2 {
+	margin: 0;
+}
+
+.yer-topics__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px solid var(--yer-line);
+}
+
+.yer-topics__all {
+	margin-top: 12px;
+}

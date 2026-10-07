@@ -1,0 +1,20 @@
+{
+	"id": "nodebb-plugin-yasar-erasmus",
+	"name": "Yaşar Erasmus+",
+	"description": "Yaşar Üniversitesi öğrencileri için Erasmus+ sayfası: bölüm → ülke → okul, hibe hesabı, yol haritası, SSS ve okul konuları.",
+	"url": "https://github.com/sinanmertsenerr/nodebb-plugin-yasar-erasmus",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "static:app.load", "method": "init" },
+		{ "hook": "filter:navigation.available", "method": "addNavigation" }
+	],
+	"modules": {
+		"../client/yasar-erasmus.js": "./static/lib/erasmus.js",
+		"yasar-erasmus/text.js": "./static/lib/text.js",
+		"yasar-erasmus/projection.js": "./static/lib/projection.js"
+	},
+	"css": [
+		"static/css/erasmus.css"
+	],
+	"templates": "./templates"
+}

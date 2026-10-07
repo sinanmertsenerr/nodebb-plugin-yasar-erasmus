@@ -1,0 +1,307 @@
+/* Önizleme kabuğu: yu.uniforum.app'in (Yaşar Forum) Harmony iskeletini taklit eder:
+   sol menü, üst çubuk, sağ kısayollar. Yalnızca preview/build.mjs kullanır; plugin'e girmez. */
+
+:root {
+	--font: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root,
+:root[data-theme='light'] {
+	--bg: #ffffff;
+	--fg: #1f2328;
+	--muted: #5f6872;
+	--border: #e1e5ea;
+	--hover: rgba(31, 35, 40, 0.05);
+	--active: rgba(26, 115, 232, 0.1);
+	--active-fg: #1a66cc;
+	--link: #1a73e8;
+	--card: #f2f4f6;
+	--tool-blue: #1a66cc;
+	--tool-green: #047857;
+	--tool-violet: #6d28d9;
+	--tool-amber: #a35200;
+	color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+	--bg: #202124;
+	--fg: #e8eaed;
+	--muted: #9aa0a6;
+	--border: #35363a;
+	--hover: rgba(255, 255, 255, 0.06);
+	--active: rgba(130, 184, 255, 0.14);
+	--active-fg: #82b8ff;
+	--link: #82b8ff;
+	--card: #292a2d;
+	--tool-blue: #82b8ff;
+	--tool-green: #34d399;
+	--tool-violet: #c4b5fd;
+	--tool-amber: #f5b14a;
+	color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+}
+
+body {
+	background: var(--bg);
+	color: var(--fg);
+	font-family: var(--font);
+	font-size: 14px;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+.shell a {
+	color: inherit;
+}
+
+.shell .i {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	flex: none;
+	vertical-align: -0.125em;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.shell {
+	display: grid;
+	grid-template-columns: 200px minmax(0, 1fr) 200px;
+	min-height: 100vh;
+}
+
+.shell-left,
+.shell-right {
+	position: sticky;
+	top: 0;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 8px 0 12px;
+	background: var(--bg);
+}
+
+.shell-left {
+	border-right: 1px solid var(--border);
+}
+
+.shell-right {
+	border-left: 1px solid var(--border);
+	justify-content: flex-start;
+	gap: 8px;
+	padding: 8px;
+}
+
+.shell-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0 8px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.shell-nav a,
+.shell-collapse,
+.shell-rail a {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 10px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: 500;
+	color: var(--fg);
+}
+
+.shell-nav a:hover,
+.shell-collapse:hover,
+.shell-rail a:hover {
+	background: var(--hover);
+}
+
+.shell-nav a[aria-current='page'] {
+	background: var(--active);
+	color: var(--active-fg);
+	font-weight: 600;
+}
+
+.shell-divider {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 10px 6px;
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--muted);
+}
+
+.shell-divider::after {
+	content: '';
+	flex: 1;
+	height: 1px;
+	background: var(--border);
+}
+
+.shell-nav .tool {
+	border: 1px solid var(--border);
+	font-weight: 600;
+}
+
+.tool--blue { color: var(--tool-blue) !important; background: color-mix(in srgb, var(--tool-blue) 12%, transparent); }
+.tool--green { color: var(--tool-green) !important; background: color-mix(in srgb, var(--tool-green) 12%, transparent); }
+.tool--violet { color: var(--tool-violet) !important; background: color-mix(in srgb, var(--tool-violet) 12%, transparent); }
+.tool--amber { color: var(--tool-amber) !important; background: color-mix(in srgb, var(--tool-amber) 14%, transparent); }
+
+.shell-nav a.tool[aria-current='page'] {
+	box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 55%, transparent);
+}
+
+.shell-cal small {
+	display: block;
+	font-size: 11px;
+	font-weight: 500;
+	color: var(--muted);
+}
+
+.shell-collapse {
+	margin: 0 8px;
+}
+
+.shell-top {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 20px 32px 16px;
+	border-bottom: 1px solid var(--border);
+	margin: 0 32px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.shell-logo {
+	width: 48px;
+	height: 48px;
+	border-radius: 10px;
+	background: #fff;
+	display: grid;
+	place-items: center;
+	color: #1a3a6b;
+	font-weight: 800;
+	font-size: 18px;
+}
+
+.shell-brand {
+	font-weight: 700;
+	font-size: 16px;
+	flex: 1;
+}
+
+.shell-theme {
+	width: 44px;
+	height: 44px;
+	border: 0;
+	border-radius: 50%;
+	background: var(--hover);
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+	font-size: 16px;
+}
+
+:root[data-theme='dark'] .i--sun,
+:root[data-theme='light'] .i--moon {
+	display: none;
+}
+
+.shell-main {
+	padding: 24px 32px 16px;
+}
+
+.shell-profile {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 10px;
+	border: 1px solid var(--border);
+	border-radius: 10px;
+}
+
+.shell-avatar {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: #0f766e;
+	color: #fff;
+	font-weight: 600;
+	display: grid;
+	place-items: center;
+}
+
+.shell-profile small {
+	display: block;
+	color: var(--muted);
+	font-size: 12px;
+}
+
+.shell-newtopic {
+	display: flex !important;
+	justify-content: center;
+	background: #1a73e8;
+	color: #fff !important;
+	font-weight: 600 !important;
+	border-radius: 10px !important;
+	padding: 10px !important;
+}
+
+.shell-newtopic:hover {
+	background: #1668d3 !important;
+}
+
+@media (max-width: 1399px) {
+	.shell {
+		grid-template-columns: 200px minmax(0, 1fr);
+	}
+
+	.shell-right {
+		display: none;
+	}
+}
+
+@media (max-width: 991px) {
+	.shell {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.shell-left {
+		display: none;
+	}
+
+	.shell-top {
+		margin: 0 16px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	.shell-main {
+		padding: 16px 16px 8px;
+	}
+}

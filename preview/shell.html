@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erasmus+ | Yaşar Forum (önizleme)</title>
+<script>
+	// Forumun koyu/açık tercihini taklit eder. ?tema=dark|light adresle de seçilebilir.
+	(function () {
+		var saved = null;
+		var q = (location.search.match(/[?&]tema=(dark|light)/) || [])[1];
+		try { saved = q || localStorage.getItem('yer-theme'); } catch (e) {}
+		var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+		var root = document.documentElement;
+		root.setAttribute('data-theme', dark ? 'dark' : 'light');
+		root.setAttribute('data-bs-theme', dark ? 'dark' : 'light');
+	})();
+</script>
+<style>
+/*__FONTS__*/
+/*__CSS__*/
+</style>
+</head>
+<body>
+<!--__SPRITE__-->
+<a class="visually-hidden" href="#yer-main">İçeriğe geç</a>
+
+<div class="shell">
+	<nav class="shell-left" aria-label="Forum menüsü">
+		<ul class="shell-nav">
+			<li><a href="#"><svg class="i"><use href="#i-house"/></svg><span>Ana Sayfa</span></a></li>
+			<li><a href="#"><svg class="i"><use href="#i-table-cells-large"/></svg><span>Kategoriler</span></a></li>
+			<li><a href="#"><svg class="i"><use href="#i-inbox"/></svg><span>Okunmamış</span></a></li>
+			<li><a href="#"><svg class="i"><use href="#i-tags"/></svg><span>Etiketler</span></a></li>
+			<li><a href="#"><svg class="i"><use href="#i-fire"/></svg><span>Popüler</span></a></li>
+			<li><a href="#"><svg class="i"><use href="#i-user"/></svg><span>Kullanıcılar</span></a></li>
+			<li><a href="#"><svg class="i"><use href="#i-user-group"/></svg><span>Gruplar</span></a></li>
+			<li><a href="#"><svg class="i"><use href="#i-gear"/></svg><span>Yönetim</span></a></li>
+			<li class="shell-divider"><svg class="i"><use href="#i-graduation-cap"/></svg>Araçlar</li>
+			<li><a class="tool tool--blue" href="#"><svg class="i"><use href="#i-table-cells"/></svg><span>Timetable</span></a></li>
+			<li><a class="tool tool--green" href="#"><svg class="i"><use href="#i-file-lines"/></svg><span>CV Oluşturucu</span></a></li>
+			<li><a class="tool tool--violet" href="#"><svg class="i"><use href="#i-file-pdf"/></svg><span>PDF Araçları</span></a></li>
+			<li><a class="tool tool--amber" href="#" aria-current="page"><svg class="i"><use href="#i-earth-europe"/></svg><span>Erasmus+</span></a></li>
+			<li><a class="shell-cal" href="#"><svg class="i"><use href="#i-calendar-days"/></svg><span>Akademik Takvim<small>Derslerin başlamasına 2 gün</small></span></a></li>
+		</ul>
+		<a class="shell-collapse" href="#"><svg class="i"><use href="#i-angles-left"/></svg><span>Daralt</span></a>
+	</nav>
+
+	<div class="shell-center">
+		<header class="shell-top">
+			<span class="shell-logo" aria-hidden="true">YÜ</span>
+			<span class="shell-brand">Yaşar Forum</span>
+			<button type="button" class="shell-theme" data-theme-toggle aria-label="Temayı değiştir">
+				<svg class="i i--sun"><use href="#i-sun"/></svg>
+				<svg class="i i--moon"><use href="#i-moon"/></svg>
+			</button>
+		</header>
+
+		<main id="yer-main" class="shell-main" tabindex="-1">
+<!--PAGE-->
+		</main>
+	</div>
+
+	<aside class="shell-right shell-rail" aria-label="Kısayollar">
+		<div class="shell-profile"><span class="shell-avatar" aria-hidden="true">S</span><span><strong>smsdev</strong><small>Profil ve ayarlar</small></span></div>
+		<a class="shell-newtopic" href="#"><svg class="i"><use href="#i-pen-to-square"/></svg>Yeni konu</a>
+		<a href="#"><svg class="i"><use href="#i-magnifying-glass"/></svg>Arama</a>
+		<a href="#"><svg class="i"><use href="#i-bell"/></svg>Bildirimler</a>
+		<a href="#"><svg class="i"><use href="#i-comments"/></svg>Sohbetler</a>
+		<a href="#"><svg class="i"><use href="#i-file-lines"/></svg>Taslaklar</a>
+	</aside>
+</div>
+
+<script type="application/json" id="yer-data">__DATA__</script>
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>
