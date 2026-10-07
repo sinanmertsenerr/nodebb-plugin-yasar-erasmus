@@ -475,10 +475,13 @@
 				</section>
 				<section class="yer-block yer-topics" aria-labelledby="yer-topics-t" data-topics="${esc(s.id)}">
 					<div class="yer-topics__head">
-						<h3 class="yer-h2" id="yer-topics-t">Bu okul hakkında konular</h3>
-						<button type="button" class="yer-btn yer-btn--primary" data-new-topic>Konu aç</button>
+						<h3 class="yer-h2" id="yer-topics-t">Bu okul hakkında daha fazla paylaşım</h3>
+						<div class="yer-topics__actions">
+							<button type="button" class="yer-btn yer-btn--primary" data-new-topic>Konu aç</button>
+							<a class="yer-btn yer-btn--outline" href="${esc(`${env.rel}/category/${env.cid}`)}" data-topics-all>Konular</a>
+						</div>
 					</div>
-					<div data-topics-list><p class="yer-note">Konular yükleniyor…</p></div>
+					<div data-topics-list></div>
 				</section>
 				${quota ? `<div class="yer-quota"><span>Okul bazında kontenjan yayımlanmıyor.</span><span class="yer-quota__links">${quota.links.map(l => ext(l.url, l.label)).join('')}</span></div>` : ''}
 			</section>`;
@@ -656,7 +659,6 @@
 				return;
 			}
 			if (!env.topicsUrl || !env.cid) {
-				box.innerHTML = '<p class="yer-note">Forum konuları önizlemede görünmez.</p>';
 				return;
 			}
 			try {
@@ -665,14 +667,16 @@
 					throw new Error(res.status);
 				}
 				const { topics, categoryUrl } = await res.json();
-				const all = `<a class="yer-link" href="${esc(env.rel + categoryUrl)}">Tüm Erasmus+ konuları${icon('chevron-right')}</a>`;
+				const allLink = root.querySelector(`[data-topics="${CSS.escape(s.id)}"] [data-topics-all]`);
+				if (allLink && categoryUrl) {
+					allLink.href = env.rel + categoryUrl;
+				}
 				box.innerHTML = topics.length ?
 					`<ul class="yer-topics__list">${topics.map(t => `<li><a class="yer-pick" href="${esc(`${env.rel}/topic/${t.slug}`)}">
 						<span><strong class="yer-pick__name">${esc(t.title)}</strong><span class="yer-pick__city">${esc(t.user)} · ${esc(ago(t.lastposttime))}</span></span>
-						<span class="yer-count" aria-label="${nf.format(t.replies)} cevap">${nf.format(t.replies)}</span></a></li>`).join('')}</ul><p class="yer-topics__all">${all}</p>` :
-					`<p class="yer-note">Henüz konu yok. Bu okula gittiysen ya da merak ettiğin bir şey varsa ilk konuyu sen aç.</p><p class="yer-topics__all">${all}</p>`;
+						<span class="yer-count" aria-label="${nf.format(t.replies)} cevap">${nf.format(t.replies)}</span></a></li>`).join('')}</ul>` : '';
 			} catch (err) {
-				box.innerHTML = '<p class="yer-note">Konular şu an yüklenemedi.</p>';
+				box.innerHTML = '';
 			}
 		}
 

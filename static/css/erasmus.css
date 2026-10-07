@@ -1907,13 +1907,15 @@
 	margin: 0;
 }
 
+.yer-topics__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
 .yer-topics__list {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 	border-top: 1px solid var(--yer-line);
-}
-
-.yer-topics__all {
-	margin-top: 12px;
 }

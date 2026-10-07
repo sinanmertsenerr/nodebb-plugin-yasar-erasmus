@@ -1,6 +1,6 @@
 {
 	"name": "nodebb-plugin-yasar-erasmus",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Yaşar Üniversitesi öğrencileri için Erasmus+ sayfası (NodeBB eklentisi).",
 	"license": "MIT",
 	"scripts": {
