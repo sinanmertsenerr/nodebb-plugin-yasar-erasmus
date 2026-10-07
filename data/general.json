@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07",
+ "generated_at": "2026-10-08",
  "term": {
   "academic_year": "2025-2026"
  },
@@ -676,12 +676,12 @@
   "with_website": 227,
   "geocoded": 231,
   "info": {
-   "language_requirement": 184,
-   "instruction": 191,
-   "fees": 144,
-   "courses_url": 106,
-   "accommodation": 175,
-   "deadlines": 97
+   "language_requirement": 161,
+   "instruction": 188,
+   "fees": 232,
+   "courses_url": 186,
+   "accommodation": 188,
+   "deadlines": 210
   }
  },
  "warnings": [
