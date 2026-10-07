@@ -473,6 +473,10 @@
 					<h3 class="yer-h2" id="yer-info-t">Okul hakkında</h3>
 					${infoRows(s)}
 				</section>
+				${quota ? `<section class="yer-block" aria-labelledby="yer-quota-t">
+					<h3 class="yer-h2" id="yer-quota-t">Kontenjan</h3>
+					<div class="yer-quota"><span>Okul bazında kontenjan yayımlanmıyor.</span><span class="yer-quota__links">${quota.links.map(l => ext(l.url, l.label)).join('')}</span></div>
+				</section>` : ''}
 				<section class="yer-block yer-topics" aria-labelledby="yer-topics-t" data-topics="${esc(s.id)}">
 					<div class="yer-topics__head">
 						<h3 class="yer-h2" id="yer-topics-t">Bu okul hakkında daha fazla paylaşım</h3>
@@ -483,7 +487,6 @@
 					</div>
 					<div data-topics-list></div>
 				</section>
-				${quota ? `<div class="yer-quota"><span>Okul bazında kontenjan yayımlanmıyor.</span><span class="yer-quota__links">${quota.links.map(l => ext(l.url, l.label)).join('')}</span></div>` : ''}
 			</section>`;
 		}
 
