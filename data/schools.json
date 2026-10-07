@@ -1073,12 +1073,12 @@
   "raw_department_text": "Law (Second and Third Cycle)",
   "info": {
    "language_requirement": "İngilizce için en az B2; dönemde 20-30 kredi",
-   "instruction": "Eğitim dili derse göre; İngilizce derslerde B2",
-   "fees": "Kaynakta ders ücreti yok; yurt (2 kişilik oda) dönemlik 308-357 €, aylık yaşam gideri yaklaşık 300 €",
+   "instruction": "Derse göre değişir",
+   "fees": "Kaynakta ders ücreti yok",
    "courses_url": null,
    "exchange_url": "https://www.uni-vt.bg/eng/pages/?page=307",
    "accommodation": {
-    "info": "Başvuru formunda 'ACCOMMODATION' kutusunu işaretleyerek yurtta oda ayırtırsın. İkinci dönem için oda sayısı sınırlı.",
+    "info": "Başvuru formunda 'ACCOMMODATION' kutusunu işaretleyerek yurtta oda ayırtırsın. İkinci dönem için oda sayısı sınırlı. 2 kişilik oda dönemlik 308–357 €; aylık yaşam gideri yaklaşık 300 €.",
     "url": "https://www.uni-vt.bg/eng/pages/?page=307"
    },
    "deadlines": null,
@@ -1480,11 +1480,11 @@
   "info": {
    "language_requirement": "İngilizce en az B2, belge istenmez; en az 15 AKTS; Erasmus için kalış 90 günü geçmeli",
    "instruction": "İngilizce",
-   "fees": "Başvuru ücreti ve öğrenim ücreti yok; yurt imkânı sunulur",
+   "fees": "Başvuru ve öğrenim ücreti yok",
    "courses_url": "https://exchange.vse.cz/students/accepted-students/course-registration/",
    "exchange_url": "https://exchange.vse.cz/students/prospective-students/how-to-apply/",
    "accommodation": {
-    "info": null,
+    "info": "Yurt imkânı sunulur.",
     "url": "https://exchange.vse.cz/students/prospective-students/how-to-apply/"
    },
    "deadlines": {
@@ -1580,7 +1580,7 @@
   "info": {
    "language_requirement": "İngilizce en az B2 belgesi (uluslararası belge ya da kendi okulundan yazı); dönemde en az 3 ana ders",
    "instruction": "İngilizce dersler",
-   "fees": "Dil kursları ücretsiz; Erasmus öğrencisi ücreti kaynakta yok; yurt yok",
+   "fees": "Erasmus öğrencisi ücreti kaynakta yok; dil kursları ücretsiz",
    "courses_url": "https://www.mup.cz/en/international-cooperation/information-for-incoming-exchange-students/courses-in-english/",
    "exchange_url": "https://www.mup.cz/en/international-cooperation/information-for-incoming-exchange-students/",
    "accommodation": {
@@ -1822,7 +1822,7 @@
   "info": {
    "language_requirement": "Yüksek lisansta İngilizce B2 belgesi; lisansta belge gerekmez, görüşmede değerlendirilir",
    "instruction": "İngilizce (mimarlık eğitimi tamamen İngilizce)",
-   "fees": "Erasmus öğrencisi ücret ödemez; başvuru son tarihleri 31 Mart (güz) ve 30 Eylül (bahar)",
+   "fees": "Erasmus öğrencisi ücret ödemez",
    "courses_url": null,
    "exchange_url": "https://www.archip.eu/incoming-studies/",
    "accommodation": {
@@ -1830,7 +1830,7 @@
     "url": "https://www.archip.eu/incoming-studies/"
    },
    "deadlines": {
-    "info": "Nomination ve başvuru 30 Nisan (güz) ve 31 Ekim (bahar) tarihine kadar ofise ulaşmalı. Başka bir sayfada 31 Mart / 30 Eylül yazıyor; teyit et.",
+    "info": "Okulun sayfalarında iki farklı tarih var: 30 Nisan (güz) / 31 Ekim (bahar) ve 31 Mart (güz) / 30 Eylül (bahar). Kaynaklar çelişiyor: erken olanı esas al, okuldan teyit et.",
     "url": "https://www.archip.eu/incoming-studies/",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },
@@ -2025,9 +2025,9 @@
   },
   "raw_department_text": "Music (First and Second Cycle)",
   "info": {
-   "language_requirement": "Kaynakta dil şartı yok; seçme için ses/video, niyet mektubu istenir",
+   "language_requirement": "Kaynakta dil şartı yok",
    "instruction": "Kaynakta eğitim dili yok",
-   "fees": "Kaynakta ücret bilgisi yok; başvuru son tarihi 1 Mart",
+   "fees": "Kaynakta ücret bilgisi yok",
    "courses_url": null,
    "exchange_url": "https://www.sdmk.dk/en/studies/incoming-exchange",
    "accommodation": {
@@ -2035,7 +2035,7 @@
     "url": "https://www.sdmk.dk/en/study/student-life"
    },
    "deadlines": {
-    "info": "Başvuru son tarihi 1 Mart (sadece tamamlanmış ve nomination'lı başvurular alınır). Koordinatör nomination'ı en geç 10 Mart'ta göndermeli.",
+    "info": "Başvuru son tarihi 1 Mart (sadece tamamlanmış ve nomination'lı başvurular alınır). Koordinatör nomination'ı en geç 10 Mart'ta göndermeli. Başvuruda ses ya da video kaydı ve niyet mektubu istenir.",
     "url": "https://www.sdmk.dk/en/studies/incoming-exchange",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },
@@ -4004,7 +4004,7 @@
   "info": {
    "language_requirement": null,
    "instruction": "Almanca, İngilizce ve iki dilli dersler",
-   "fees": "Kaynakta ücret ve dil şartı yok; okula sor. Aday gösterme son tarihi 1 Mayıs (güz), 1 Kasım (bahar)",
+   "fees": "Kaynakta ücret bilgisi yok; okula sor",
    "courses_url": null,
    "exchange_url": null,
    "accommodation": {
@@ -4095,7 +4095,7 @@
     "url": "https://www.uni-wuerzburg.de/en/international/studying-in-wuerzburg/exchange-students/application-and-admission-for-programme-students/"
    },
    "deadlines": {
-    "info": "Ev üniversiten nomination yapınca online kayıt linki e-postayla gelir. Yurt odası başvuru son tarihi: kış dönemi 15 Haziran, yaz dönemi 15 Ocak (zamanında başvuran değişim öğrencisine oda garanti).",
+    "info": "Ev üniversiten nomination yapınca online kayıt linki e-postayla gelir. Yurt başvurusu için Konaklama satırına bak.",
     "url": "https://www.uni-wuerzburg.de/en/international/studying-in-wuerzburg/exchange-students/application-and-admission-for-programme-students/",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },
@@ -4541,7 +4541,7 @@
   "info": {
    "language_requirement": "Almanca ya da İngilizce en az B1 (ikisinden biri zorunlu)",
    "instruction": "Almanca ve İngilizce dersler",
-   "fees": "Dönem katkı payı var (tutarı kaynakta yok); başvuru son tarihleri 31 Temmuz (kış) ve 31 Ocak (yaz)",
+   "fees": "Dönem katkı payı var (tutarı kaynakta yok)",
    "courses_url": null,
    "exchange_url": "https://www.fh-erfurt.de/en/central-facilities/international-office/incoming-students",
    "accommodation": {
@@ -5236,7 +5236,7 @@
   "info": {
    "language_requirement": "Almanca dersler için B1, İngilizce dersler için B2; başvuruda belge istenmez",
    "instruction": "Çoğunlukla Almanca; her dönem bazı İngilizce dersler",
-   "fees": "Öğrenim ücreti yok; dönem katkı payı yaklaşık 380 € (toplu taşıma dahil, 75 € yönetim ücreti alınmaz); yurt aylık 350-420 €",
+   "fees": "Öğrenim ücreti yok; dönem katkı payı yaklaşık 380 € (toplu taşıma dahil, 75 € yönetim ücreti alınmaz)",
    "courses_url": "https://www.uni-osnabrueck.de/en/studying/our-study-programs/study-programs-and-courses-in-english",
    "exchange_url": "https://www.uni-osnabrueck.de/en/prospective-students/international-prospective-students/exchange-and-erasmus-students/",
    "accommodation": {
@@ -5303,7 +5303,7 @@
   "info": {
    "language_requirement": "Almancanın yeterli düzeyi aranır (seviye kaynakta yok); Erasmus+ OLS dil desteği var",
    "instruction": "Almanca",
-   "fees": "Kaynakta Erasmus ücreti yok (1.500 € ücret yalnızca AB dışı diploma öğrencileri için); başvuru son tarihi 31 Mart (güz) ve 30 Kasım (bahar)",
+   "fees": "Kaynakta Erasmus ücreti yok (1.500 € ücret yalnızca AB dışı diploma öğrencileri için)",
    "courses_url": null,
    "exchange_url": "https://hfm-karlsruhe.de/en/studying/international-studies/erasmus",
    "accommodation": {
@@ -5311,7 +5311,7 @@
     "url": "https://www.sw-ka.de/de/wohnen/"
    },
    "deadlines": {
-    "info": "Sonraki akademik yıl için başvuru son tarihi 31 Ocak.",
+    "info": "Okulun sayfalarında farklı tarihler var: sonraki akademik yıl için 31 Ocak ve 31 Mart (güz) / 30 Kasım (bahar). Kaynaklar çelişiyor: erken olanı esas al, okuldan teyit et.",
     "url": "https://hfm-karlsruhe.de/en/studying/international-studies/erasmus",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },
@@ -5431,7 +5431,7 @@
   "info": {
    "language_requirement": "Almanca B1 önerilir, kanıt istenmez",
    "instruction": "Almanca",
-   "fees": "Öğrenim ücreti yok; dönem katkı payı 327,80 € (Deutschlandticket dahil); Almanca kursu dönemlik 40 €; başvuru 15 Nisan (güz) ve 15 Kasım (bahar)",
+   "fees": "Öğrenim ücreti yok; dönem katkı payı 327,80 € (Deutschlandticket dahil); Almanca kursu dönemlik 40 €",
    "courses_url": null,
    "exchange_url": "https://www.hmt-rostock.de/en/international/erasmus/",
    "accommodation": {
@@ -5439,7 +5439,7 @@
     "url": "https://www.hmt-rostock.de/en/international/erasmus/"
    },
    "deadlines": {
-    "info": "Son tarih her yıl Ocak ayında; sayfadaki örnek: 15 Ocak 2026 son tarihi hem 2026/27 kış hem 2027 yaz dönemi için geçerli.",
+    "info": "Okulun sayfalarında farklı tarihler var: her yıl 15 Ocak (hem kış hem yaz dönemi için) ve 15 Nisan (güz) / 15 Kasım (bahar). Kaynaklar çelişiyor: erken olanı esas al, okuldan teyit et.",
     "url": "https://www.hmt-rostock.de/en/international/erasmus/",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },
@@ -6345,15 +6345,15 @@
   "info": {
    "language_requirement": "İngilizce",
    "instruction": "İngilizce (her fakülteden, lisans ve yüksek lisans dersleri)",
-   "fees": "Öğrenim ücreti yok; yurt 5 ay için 850 €; aday gösterme 15 Mayıs (güz) ve 30 Eylül (bahar)",
+   "fees": "Öğrenim ücreti yok",
    "courses_url": "https://erasmus.uni-miskolc.hu/",
    "exchange_url": "https://www.uni-miskolc.hu/en/education/exchange-programmes/erasmus/",
    "accommodation": {
-    "info": "Konaklama öncelikle Miskolc'taki UM ortak yurtlarında sağlanıyor.",
+    "info": "Konaklama öncelikle Miskolc'taki UM ortak yurtlarında sağlanıyor. Yurt 5 ay için 850 €.",
     "url": "https://www.uni-miskolc.hu/en/admission/accommodation-information-for-prospective-students/"
    },
    "deadlines": {
-    "info": "Nomination sonrası Erasmus+ görevlisi e-postayla iletişime geçer. Sayfadaki 2026 tarihleri: Learning Agreement 30 Haziran 2026; yurt ücreti yeri garantilemek için 15 Haziran 2026'ya kadar yatırılmalı.",
+    "info": "Nomination: 15 Mayıs (güz), 30 Eylül (bahar). Nomination sonrası Erasmus+ görevlisi e-postayla iletişime geçer. Sayfadaki 2026 tarihleri: Learning Agreement 30 Haziran 2026; yurt ücreti yeri garantilemek için 15 Haziran 2026'ya kadar yatırılmalı.",
     "url": "https://www.uni-miskolc.hu/en/education/exchange-programmes/erasmus/",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },
@@ -6441,23 +6441,27 @@
   },
   "raw_department_text": "Business Administration, Computer Science, Visual Communication Design, Journalism (First Cycle)",
   "info": {
-   "language_requirement": "İngilizce B2 (kendi okulun aday gösterirken onaylar); dönemde en az 20 AKTS",
+   "language_requirement": "İngilizce B2 (kendi okulun aday gösterirken onaylar)",
    "instruction": "İngilizce ve Macarca",
-   "fees": "Aylık yaşam gideri (yurt dahil) yaklaşık 320 €; aday gösterme 1 Haziran (güz) ve 1 Aralık (bahar)",
+   "fees": null,
    "courses_url": null,
    "exchange_url": "https://www.uniduna.hu/en/component/content/article?id=451%3Afor-partner-institutions",
    "accommodation": {
-    "info": null,
+    "info": "Aylık yaşam gideri (yurt dahil) yaklaşık 320 €.",
     "url": "https://www.uniduna.hu/en/prepare-for-your-stay/housing"
    },
-   "deadlines": null,
+   "deadlines": {
+    "info": "Nomination: 1 Haziran (güz), 1 Aralık (bahar).",
+    "url": null,
+    "note": "Okulun resmi sayfasında nomination/başvuru tarihi bulamadım. TurnaPortal'daki ilana ve okulun Erasmus sayfasına bak."
+   },
    "source": "https://www.uniduna.hu/en/component/content/article?id=451%3Afor-partner-institutions",
    "checked": "2026-10-07",
    "fallback_url": "https://www.uniduna.hu/en/component/content/article?id=451%3Afor-partner-institutions",
    "fallback_kind": "erasmus-sayfası",
    "missing": [
-    "courses_url",
-    "deadlines"
+    "fees",
+    "courses_url"
    ]
   }
  },
@@ -7538,11 +7542,11 @@
   "info": {
    "language_requirement": "İngilizce derslerde B1, İtalyanca derslerde A2",
    "instruction": "İtalyanca; çok sayıda İngilizce ders",
-   "fees": "Kaynakta Erasmus ücreti yok; İtalyanca kursu ücretsiz; yurt aylık 290-420 €",
+   "fees": "Kaynakta Erasmus ücreti yok; İtalyanca kursu ücretsiz",
    "courses_url": "https://www.unipd.it/en/erasmus-study-between-programme-countries-ka103-and-semp",
    "exchange_url": "https://www.unipd.it/en/before-your-arrival-erasmus-studies",
    "accommodation": {
-    "info": "SASSA yurdunda kalanlar sözleşmeyi uzatamaz; uzatmada odayı bırakıp özel konut bulmak gerekir.",
+    "info": "Yurt aylık 290–420 €. SASSA yurdunda kalanlar sözleşmeyi uzatamaz; uzatmada odayı bırakıp özel konut bulmak gerekir.",
     "url": "https://www.unipd.it/en/accommodation-erasmus"
    },
    "deadlines": {
@@ -7726,12 +7730,12 @@
   "info": {
    "language_requirement": "Kaynakta dil seviyesi yok; okula sor",
    "instruction": "İtalyanca",
-   "fees": "Kaynakta ücret bilgisi yok; başvuru 15 Eylül (kış) ve 15 Ocak (yaz)",
+   "fees": "Kaynakta ücret bilgisi yok; okula sor",
    "courses_url": null,
    "exchange_url": "https://conservatorionicolini.com/mobilitastudenti",
    "accommodation": null,
    "deadlines": {
-    "info": "Güz dönemi için son tarih 1 Mayıs, bahar dönemi için 1 Kasım.",
+    "info": "Okulun sayfalarında farklı tarihler var: 1 Mayıs (güz) / 1 Kasım (bahar) ve 15 Eylül (kış) / 15 Ocak (yaz). Kaynaklar çelişiyor: erken olanı esas al, okuldan teyit et.",
     "url": "https://www.conservatorionicolini.com/mobilitastudenti",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },
@@ -8699,21 +8703,24 @@
   },
   "raw_department_text": "Music (First and Second Cycle)",
   "info": {
-   "language_requirement": "Kaynakta dil şartı yok; başvuru EASY üzerinden, son tarih 1 Mayıs (kış) ve 15 Ekim (bahar)",
+   "language_requirement": "Kaynakta dil şartı yok; okula sor",
    "instruction": "İtalyanca",
    "fees": "Kaynakta ücret bilgisi yok; okula sor",
    "courses_url": null,
    "exchange_url": "https://www.constp.it/erasmus/studenti/",
    "accommodation": null,
-   "deadlines": null,
+   "deadlines": {
+    "info": "Başvuru EASY sistemi üzerinden. Son tarih: 1 Mayıs (kış), 15 Ekim (bahar).",
+    "url": null,
+    "note": "Okulun resmi sayfasında nomination/başvuru tarihi bulamadım. TurnaPortal'daki ilana ve okulun Erasmus sayfasına bak."
+   },
    "source": "https://www.constp.it/erasmus/studenti/",
    "checked": "2026-10-07",
    "fallback_url": "https://www.constp.it/erasmus/studenti/",
    "fallback_kind": "erasmus-sayfası",
    "missing": [
     "courses_url",
-    "accommodation",
-    "deadlines"
+    "accommodation"
    ]
   }
  },
@@ -10424,7 +10431,7 @@
   "info": {
    "language_requirement": "Programa göre; İngilizce programlarda IELTS 5,5 düzeyi; Felemenkçe programlarda Felemenkçe",
    "instruction": "İngilizce ve Felemenkçe programlar (tasarım, güzel sanatlar İngilizce)",
-   "fees": "Kaynakta değişim ücreti yok; başvuru 1 Nisan (güz)",
+   "fees": "Kaynakta değişim ücreti yok",
    "courses_url": "https://www.artez.nl/media/pdf_en_link_map/brochure_exchange.pdf",
    "exchange_url": "https://www.artez.nl/en/study-at-artez/arrange-your-study/artez-exchange",
    "accommodation": {
@@ -10432,7 +10439,7 @@
     "url": "https://www.artez.nl/en/study-at-artez/arrange-your-study/housing"
    },
    "deadlines": {
-    "info": "Nomination e-postayla kabul edilmiyor; resmi sistem üzerinden yapılmalı.",
+    "info": "Başvuru son tarihi: 1 Nisan (güz). Nomination e-postayla kabul edilmiyor; resmi sistem üzerinden yapılmalı.",
     "url": "https://www.artez.nl/en/study-at-artez/arrange-your-study/artez-exchange",
     "note": "Tarihler her yıl değişebilir; resmi sayfadan teyit et."
    },

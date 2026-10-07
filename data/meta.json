@@ -1,6 +1,6 @@
 {
  "generated_at": "2026-10-07",
- "content_hash": "472752752ce6cd642ad06e2952e15808b65d201d53b897381b6555bfd0c4fc14",
+ "content_hash": "c6084d8cc48e995ba77fa21140f36587c490a8457179bdcb3ebd0207344c1f65",
  "term": {
   "academic_year": "2025-2026"
  },
@@ -14,10 +14,10 @@
   "info": {
    "language_requirement": 184,
    "instruction": 191,
-   "fees": 145,
+   "fees": 144,
    "courses_url": 106,
    "accommodation": 175,
-   "deadlines": 95
+   "deadlines": 97
   }
  },
  "files": {
