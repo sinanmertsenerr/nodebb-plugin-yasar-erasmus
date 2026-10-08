@@ -1,5 +1,12 @@
+{{{ if breadcrumbs.length }}}
+<div class="yer-crumbs"><!-- IMPORT partials/breadcrumbs.tpl --></div>
+{{{ end }}}
 <!-- IMPORT partials/yasar-erasmus/icons.tpl -->
-<div data-yer-root data-data-url="{dataUrl}" data-topics-url="{topicsUrl}" data-cid="{categoryId}">
+{{aboveHtml}}
+<div data-yer-root data-data-url="{dataUrl}" data-topics-url="{topicsUrl}" data-cid="{categoryId}" data-start="{start}">
+	{{{ if innerHtml }}}
+	<div class="yer" aria-busy="true">{{innerHtml}}</div>
+	{{{ else }}}
 	<div class="yer" aria-busy="true">
 		<div class="yer-skel" role="status">
 			<span class="yer-sr">Erasmus+ yükleniyor</span>
@@ -9,4 +16,6 @@
 		</div>
 		<noscript><p class="yer-note">Erasmus+ sayfası için tarayıcında JavaScript açık olmalı.</p></noscript>
 	</div>
+	{{{ end }}}
 </div>
+{{indexHtml}}

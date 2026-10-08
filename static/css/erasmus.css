@@ -1983,3 +1983,76 @@
 	list-style: none;
 	border-top: 1px solid var(--yer-line);
 }
+
+/* Arama motoru sayfaları: yol (breadcrumb), ülke girişi ve altta bütün sayfaların dizini */
+.yer-crumbs {
+	max-width: 1040px;
+	margin: 0 auto 12px;
+}
+
+.yer-landing {
+	padding-bottom: 8px;
+	border-bottom: 1px solid var(--yer-line);
+	margin-bottom: 24px;
+}
+
+.yer-landing .yer-title {
+	max-width: none;
+}
+
+.yer-landing > p {
+	margin-top: 10px;
+	max-width: 72ch;
+}
+
+.yer-index {
+	padding-top: 24px;
+	border-top: 1px solid var(--yer-line);
+}
+
+.yer-index > .yer-h2 {
+	margin-bottom: 12px;
+}
+
+.yer-index .yer-qa__a {
+	max-width: none;
+}
+
+.yer-index__links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	columns: 3 220px;
+	column-gap: 24px;
+}
+
+.yer-index__links--wide {
+	columns: 2 320px;
+	margin-top: 16px;
+}
+
+.yer-index__links li {
+	break-inside: avoid;
+	padding: 3px 0;
+}
+
+.yer-index__links a,
+.yer-index__h a {
+	color: var(--yer-accent-text);
+	text-decoration: none;
+}
+
+.yer-index__links a:hover,
+.yer-index__h a:hover {
+	text-decoration: underline;
+}
+
+.yer-index__h {
+	margin: 16px 0 6px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.yer-index__h:first-child {
+	margin-top: 0;
+}

@@ -116,7 +116,8 @@
 		}
 
 		function parseHash() {
-			const parts = decodeURIComponent(window.location.hash.replace(/^#/, '')).split('/');
+			// Bölüm, okul ve rehber sayfaları (/erasmus/okul/…) kendi seçimiyle açılır; # varsa o geçerli.
+			const parts = decodeURIComponent(window.location.hash.replace(/^#/, '') || root.dataset.start || '').split('/');
 			const head = parts[0];
 			if (head === 'okul' && byId.has(parts[1])) {
 				const s = byId.get(parts[1]);
@@ -138,7 +139,7 @@
 			return `<header class="yer-head">
 				<div>
 					<h1 class="yer-title">Erasmus+ ile bir dönem yurt dışı</h1>
-					<p class="yer-lede">Yaşar öğrencileri için anlaşmalı okullar ve hibe.</p>
+					<p class="yer-lede">Yaşar Üniversitesi öğrencileri için anlaşmalı okullar ve hibe.</p>
 					<p class="yer-meta">${esc(T.termLabel(g.term.academic_year))} · ${nf.format(schools.length)} okul · ${nf.format(countryNames.length)} ülke${date ? ` · ${esc(date)}` : ''}</p>
 				</div>
 				<aside class="yer-status" aria-label="Sıradaki ilan">

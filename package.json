@@ -1,6 +1,6 @@
 {
 	"name": "nodebb-plugin-yasar-erasmus",
-	"version": "1.1.5",
+	"version": "1.2.0",
 	"description": "Yaşar Üniversitesi öğrencileri için Erasmus+ sayfası (NodeBB eklentisi).",
 	"license": "MIT",
 	"scripts": {
@@ -17,6 +17,7 @@
 	"author": "Sinan Mert Sener",
 	"files": [
 		"library.js",
+		"lib/",
 		"plugin.json",
 		"data/",
 		"static/",

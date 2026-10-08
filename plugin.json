@@ -6,7 +6,8 @@
 	"library": "./library.js",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "filter:navigation.available", "method": "addNavigation" }
+		{ "hook": "filter:navigation.available", "method": "addNavigation" },
+		{ "hook": "filter:sitemap.getPages", "method": "addSitemapPages" }
 	],
 	"modules": {
 		"../client/yasar-erasmus.js": "./static/lib/erasmus.js",
