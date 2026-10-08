@@ -1552,8 +1552,25 @@
 		grid-template-columns: minmax(0, 1fr);
 	}
 
+	/* Telefonda dört sekme de görünsün: kaydırınca açılan "Sık sorulanlar" fark edilmiyordu. */
 	.yer-tabs {
 		width: 100%;
+		padding: 4px;
+		gap: 2px;
+	}
+
+	.yer-tab {
+		flex: 1 1 auto;
+		padding: 8px;
+		text-align: center;
+	}
+}
+
+/* Çok dar ekranda (320 px) tek satıra sığmıyor: iki satır, ikişer sekme. */
+@media (max-width: 374px) {
+	.yer-tabs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
